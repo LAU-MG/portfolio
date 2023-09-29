@@ -1,8 +1,8 @@
 /*corps de la page */
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -12,23 +12,26 @@ body {
 
 }
 html {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto Mono', monospace;
-font-size: 15px;
-scroll-behavior: smooth;
-background-color: none;
+ font-family: 'Open Sans', sans-serif;
+ font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  scroll-behavior: smooth;
+  background-color: none;
 }
 
+/*réglages prédéfinies pour chaque sections*/
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+
+/*police d'écriture pour l'ensemble des titres du portfolio*/
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'monospace', sans-serif;
 }
-section {
-height: 100vh;
-width: 100%;
-background-color: #FFFFFF;
-display: flex;
-
-}
+/* séparation entre les sections*/
 .horizontal-bar {
   width: 40%;
   height: 2px;
@@ -426,13 +429,18 @@ margin-top: 25px;
    background-color: none;
 }
 .text-projets{
-  
+  display: flex;
+  margin-top : 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .text-projets h1  {
-  margin-top : 60px;
-  padding: 5px;
+ 
   text-align: center;
-  margin-left:160px;
+  
+ 
   color: #292b2c;
 }
 .mes-projets {
