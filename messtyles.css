@@ -17,6 +17,7 @@ html {
   font-size: 15px;
   scroll-behavior: smooth;
   background-color: none;
+  box-sizing: border-box;
 }
 
 /*réglages prédéfinies pour chaque sections*/
@@ -128,7 +129,6 @@ h1, h2, h3, h4 {
 #home .image-profile img {
   width: 15%;
   margin-bottom: 25px;
-  width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
@@ -148,7 +148,6 @@ h1, h2, h3, h4 {
 
 .motivations .column {
   padding: 15px;
-  background-color: #292b2c;
   margin: 0 50px 50px 0;
   border-radius: 20px;
   width: 200px;
@@ -348,9 +347,7 @@ margin-top: 25px;
     --progress: #e17055;
   }
   
-  html {
-    box-sizing: border-box;
-  }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -695,7 +692,7 @@ margin-left: 150px;
 
 }
 iframe{
-  width: 900px;;
+  width: 900px;
   height:400px;
   transform: scale(0.9);
     border: 5px;
@@ -736,7 +733,6 @@ width: 50%;
 .mon-contact img {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
 }
 
 img {
@@ -747,20 +743,19 @@ img {
 
 .Github {
 
-  margin-left: 50px;
   margin-top: 50px;
   display: inline-block;
 }
 
 
 .Linkedin {
-  margin-left: 50px;
+  margin-left: 30px;
   margin-top: 50px;
   display: inline-block;
 }
 
 .WordPress{
-  margin-left: 50px;
+  margin-left: 30px;
   margin-top: 50px;
   display: inline-block;
 }
@@ -783,7 +778,8 @@ margin: 0;
 .mon-contact img {
 display: inline-block;
 vertical-align: middle;
-margin-right: 10px;
+margin-right: 15px;
+margin-left: 15px;
 }
 
 img {
