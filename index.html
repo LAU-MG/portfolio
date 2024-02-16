@@ -5,85 +5,376 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="messtyles.css">
-    <script defer src="script.js"></script>
     <link href="images/favicon.png" rel="icon">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Portfolio - MIGUEL Laura</title>
 </head>
 
 <body>
-    <!-- menu navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="Votre Logo" height="40">
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html"><span class="text-warning">MIGUEL Laura</span> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+        <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item ">
                     <a class="nav-link" href="#accueil">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#propos">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">Expériences</a>
+                    <a class="nav-link" href="#parcours">Mon parcours</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#competence">Compétences</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projet">Projets professionnel</a>
+                    <a class="nav-link" href="#projets">Mes projets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#parcours">Parcours professionnel</a>
+                    <a class="nav-link" href="#contact">Contactez-moi</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contacts</a>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item-icon ">
+                    <a href="https://www.linkedin.com/in/laura-miguel-6443a5235/" target="_blank">
+                        <i class="ri ri-linkedin-fill"></i>
+                </li>
+                </a>
+                <li class="nav-item-icon">
+                    <a href="https://github.com/LAU-MG" target="_blank">
+                        <i class="ri ri-github-fill"></i>
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
-    <section id="accueil"  class="hero-section">
+    <section id="accueil" class=" p-4 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div class="container">
-            <h1>Bienvenue sur Ma Landing Page</h1>
-            <p>Une description attrayante de votre service ou produit.</p>
-            <a href="#" class="btn btn-primary">En savoir plus</a>
+            <h1>Développeuse <span class="text-warning"> Full-stack </span></h1>
+            <p class="lead my-4">
+                Mon portfolio présente en détail mes expériences professionnelles,compétences et projets.
+                Il y à également des liens vers du contenu lié à mon travail.
+            </p>
+        </div>
+        </div>
         </div>
     </section>
-    <section id="propos">
-
-    </section>
-    <section id="experience">
-
-    </section>
-    <section id="competence">
-
-    </section>
-    <section id="projet">
-
-    </section>
-    <section id="parcours">
-
-    </section>
-
-    <section id="contact" class="contact-section">
+    <section id="propos" class="p-3 p-md-5">
         <div class="container">
-            <h2>Contactez-nous</h2>
-            <p>Vous avez des questions? Envoyez-nous un message.</p>
+            <div class="row align-items-center">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <img class="img-fluid w-25 mx-4 d-none d-sm-block rounded-image " src="images/photoHome.jpg"
+                        alt="" />
+                    <div class="col-md-4">
+                        <h2 class="title-propos"><i class="ri-user-line color-icon"> </i>Qui suis-je ?</h2>
+                        <p class="item-propos">
+                            Etudiante en troisième année de licence professionnelle MIAW (Métiers de l'Informatique :
+                            Applications Web) à l'IUT d'Évry,
+                            je me spécialise en tant que développeuse full-stack.
+                        </p>
+                        <a href="images/MIGUEL_Laura_CV.pdf"
+                            class="mt-3 btn btn-warning button-cv rounded-pill text-dark fw-bold"
+                            download="MIGUEL_Laura_CV" target="_blank">
+                            <i class="ri-link mr-2"></i> Voir mon CV
+                        </a>
+                    </div>
+                    <div class="col-md-4 order_md-2">
+                        <h2 class="title-propos "><i class="ri ri-heart-fill color-icon"> </i> Ce que j'apprécie</i>
+                        </h2>
+                        <ul class="list-unstyled d-inline-flex jusitfy icon-propos ">
+                            <li class="mx-3 text-center  ">
+                                <div class="mb-2 d-flex flex-column ">
+                                    <div
+                                        class="img-container bg-warning rounded-square d-flex align-items-center justify-content-center ">
+                                        <img src="images/running.png" class="img-fluid align-items-center" width="50"
+                                            height="50" alt="Le Running">
+                                    </div>
+                                    <span class="fw-bold ">Le Running</span>
+                                </div>
+                            </li>
+                            <li class="mx-3 text-center ">
+                                <div class="mb-2 d-flex flex-column  ">
+                                    <div
+                                        class="img-container bg-warning rounded-square d-flex align-items-center justify-content-center ">
+                                        <img src="images/art.png" class="img-fluid" width="50" height="50"
+                                            alt="Les arts">
+                                    </div>
+                                    <span class="fw-bold ">Les arts</span>
+                                </div>
+                            </li>
+                            <li class="mx-3 text-center">
+                                <div class="mb-2 d-flex flex-column">
+                                    <div
+                                        class="img-container bg-warning rounded-square d-flex align-items-center justify-content-center ">
+                                        <img src="images/technologie.png" class="img-fluid" width="50" height="50"
+                                            alt="La technologie">
+                                    </div>
+                                    <span class="fw-bold ">La technologie</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+    </section>
+    <section id="parcours" class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12 mb-4">
+                    <h2 class="text-left mb-4 mt-5 parcours-title">Mon parcours professionnel</h2>
+                    <div class="card-equal">
+                        <div class="card-body">
+                            <ul class="list-unstyled text-light">
+                                <li class="mb-4">
+                                    <p class="lead fw-bold"> Depuis le 11 septembre 2023 MARC GAVANIER SAS LYON 5</p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-briefcase-fill ri-lg"></i>
+                                        Alternance licence professionelle </p>
+                                    <p>Développement FullStack.
+                                        Travail fait en TDD.
+                                    </p>
+                                    </br>
+                                    </br>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="lead fw-bold">10 JANVIER - 18 FÉVRIER 2022 DANEM PEOPLE LYON 69003</p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-briefcase-fill ri-lg"></i>
+                                        Stage de deuxième année en BTS SIO. </p>
+                                    <p>Développement Front-end et Low-code
+                                        Création sous CMS Market Grabber (utilisation
+                                        des langages HTML, CSS, JavaScript).
+                                        Gestion DNS/Serveur FTP.
+                                    </p>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="lead fw-bold">17 MAI - 25 JUIN 2021 KPOS BUSINESS VILLEURBANNE, 69100 </p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-briefcase-fill ri-lg"></i>
+                                        Stage de première année en BTS SIO. </p>
+                                    <p>Développement Low-Code
+                                        Création et modification graphique des sites
+                                        sous CMS (WordPress), SEO et hébergement
+                                        (OVH).
+                                    </p>
+                                    </br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-4">
+                    <h2 class="text-left mb-4 mt-5 parcours-title">Mon parcours scolaire</h2>
+                    <div class="card-equal">
+                        <div class="card-body">
+                            <ul class="list-unstyled text-light">
+                                <li class="mb-4 ">
+                                    <p class="lead fw-bold"> Depuis le 11 septembre 2023 IUT d’Évry Val d’Essonne</p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-award-fill ri-lg"></i>
+                                        Licence Pro MIAW </p>
+                                    <p>Admise en Licence professionnelle MIAW
+                                        (Métiers de l’Informatique: Applications Web)
+                                        parcours DAWI (Développement avancé
+                                        d’Applications Web Internet et Intranet).
+                                    </p>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="lead fw-bold">2020 - 2022 Lycée La Martinière duchère LYON 9 </p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-award-fill ri-lg"></i> BTS
+                                        SIO </p>
+                                    <p>BTS SIO (Services informatique aux
+                                        Organisations), option SLAM( Solutions
+                                        Logicielles et Applications Métiers).
+                                    </p>
+                                </li>
+                                <li class="mb-4">
+                                    <p class="lead fw-bold">2019 - 2020 Université jean moulin lyon 3 </p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-award-fill ri-lg"></i>
+                                        LICENCE LEA </p>
+                                    <p>Première Année de Licence LEA(Langues
+                                        Étrangères Appliquées), Anglais-Portugais
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead fw-bold">2017 - 2019 Lycée Édouard Hérriot lyon 6 </p>
+                                    <p class="float-left fw-bold text-warning"><i class="ri-award-fill ri-lg"></i> Bac
+                                        STMG </p>
+                                    <p>Bac STMG (Sciences et Technologies du
+                                        Management, et de la Gestion),option Mercatique.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="competence" class="p-5">
+        <div class="row">
+            <div class="col-md-4 order-md-1 text-start bg-warning d-flex align-items-center ">
+                <h1 class="mb-3 text-dark fw-bold display-4 mx-auto ms-3">Mes compétences techniques.</h1>
+            </div>
+            <div class="col-md-6 order-md-2 mb-5 ">
+                <div class="row justify-content-center me-1">
+                    <div class="col-md-10">
+                        <h2 class="mb-2 text-center">Les langages maîtrisés</h2>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 ">
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div class="circle-competences">
+                                    <img src="images/html.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">HTML5</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div class="circle-competences">
+                                    <img src="images/css.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">CSS3</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div class="circle-competences">
+                                    <img src="images/js.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Javascript</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div class="circle-competences">
+                                    <img src="images/js.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Javascript</p>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 p-3">
+                        <h2 class="mb-4 text-center">Les frameworks maîtrisés</h2>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/bootstrap.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Bootstrap</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/laravel.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Laravel</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/angular.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Angular</p>
+                            </div>
+                            <!-- Ajoutez d'autres frameworks maîtrisés ici -->
+                        </div>
+                        <h2 class="mb-4 text-center">CMS</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/wordpress.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Wordpress</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/joomla.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Joomla</p>
+                            </div>
+                            <!-- Ajoutez d'autres CMS ici -->
+                        </div>
+                        <h2 class="mb-2 text-center">Certifications</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences text-center">
+                                    <img src="images/pix.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">Pix</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 mb-3 img-center">
+                                <div class="circle-competences">
+                                    <img src="images/anssi.png" alt="icon-parcours" class="img-fluid">
+                                </div>
+                                <p class="mt-2">ANSSI</p>
+                            </div>
+                            <!-- Ajoutez d'autres certifications ici -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section id="projets" class="p-5 ">
+        <div class="container" style="width: 65%;">
+            <div class="row text-center g-4">
+                <h1 class="mb-4 text-center">Projets</h1>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="images/projet1.png" alt="projet1" class="img-fluid" />
+                            </div>
+                            <h3 class="card-title mb-3"><span class="text-warning">Prosperous Vodka</span></h3>
+                            <p class="card-text">
+                                Site web sous wordpress sur la promotion de vodka.
+                            </p>
+                            <a href="images/MIGUEL_Laura_CV.pdf" class="mt-3" download="MIGUEL_Laura_CV"
+                                target="_blank">
+                            </a>
+                            </br>
+                            <a href="https://prosperousvodka.com/" class="btn btn-warning rounded-pill" target="_blank">Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="images/projet2.png" alt="projet1" class="img-fluid" />
+                            </div>
+                            <h3 class="card-title mb-3"><span class="text-warning">KPOS BUSINESS</span></h3>
+                            <p class="card-text">
+                                Site vitrine de l'entreprise.
+                            </p>
+                            <a href="images/MIGUEL_Laura_CV.pdf" class="mt-3" download="MIGUEL_Laura_CV">
+                            </a>
+                            </br>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                            <a href=" https://kposbusiness.com/" class="btn btn-warning rounded-pill" target="_blank">Voir le site </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="p-5">
+    </section>
+    <footer class="p-5 text-center position-relative">
+        <div class="container">
+            <a href="#" class="position-absolute bottom-0 end-0 p-5 text-warning">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+
 
 
 
