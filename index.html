@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/messtyles.css">
     <link href="images/favicon.png" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script charset="utf-8" type="text/javascript" src="v2.js"></script>
 
     <title>Portfolio - MIGUEL Laura</title>
@@ -74,61 +73,57 @@
     <section id="propos" class="p-3 p-md-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="d-sm-flex align-items-center justify-content-between">
-                    <img class="img-fluid w-25 mx-4 d-none d-sm-block rounded-image " src="images/photoHome.JPG"
-                        alt="" />
-                    <div class="col-md-4">
+                <div class="col-md-4 d-sm-flex align-items-center justify-content-between">
+                    <img class="img-fluid w-25 mx-4 d-none d-sm-block rounded-image" src="images/photoHome.JPG" alt="" />
+                    <div class="col-md-8">
                         <h2 class="title-propos"><i class="ri-user-line color-icon"> </i>Qui suis-je ?</h2>
                         <p class="item-propos">
-                           <span class="fw-bold text-left">MIGUEL Laura</span>
-                        </br> 
+                            <span class="fw-bold text-left">MIGUEL Laura</span><br />
                             Etudiante en troisième année de licence professionnelle MIAW (Métiers de l'Informatique :
                             Applications Web) à l'IUT d'Évry,
                             je me spécialise en tant que développeuse full-stack.
                         </p>
-                        <a href="docs/MIGUEL_Laura_CV.pdf"
-                            class="mt-3  button-cv rounded-pill text-dark fw-bold"
-                           target="_blank">
+                        <a href="docs/MIGUEL_Laura_CV.pdf" class="mt-3 button-cv rounded-pill text-dark fw-bold text-decoration-none"
+                            target="_blank">
                             <i class="ri-link mr-2"></i> Voir mon CV
-                    </a>
+                        </a>
                     </div>
-                    <div class="col-md-4 order-md-2 order-1">
-                        <h2 class="title-propos "><i class="ri ri-heart-fill color-icon"> </i> Ce que j'apprécie</i>
-                        </h2>
-                        <ul class="d-inline-flex jusitfy icon-propos ">
-                            <li class="mx-3 text-center  ">
-                                <div class="mb-2 d-flex flex-column animation-left">
-                                    <div
-                                        class="img-container bg-color rounded-square d-flex align-items-center justify-content-center ">
-                                        <img src="images/running.png" class="img-fluid align-items-center" width="50"
-                                            height="50" alt="Le Running">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">Le Running</span>
+                </div>
+                <div class="col-md-8 order-md-2 order-1">
+                    <h2 class="title-propos"><i class="ri ri-heart-fill color-icon"> </i> Ce que j'apprécie</h2>
+                    <ul class="list-inline icon-propos">
+                        <li class="list-inline-item text-center">
+                            <div class="mb-2 d-flex flex-column">
+                                <div class="img-container bg-color rounded-square d-flex align-items-center justify-content-center">
+                                    <img src="images/running.png" class="img-fluid align-items-center animation-left animate__animated animate__fadeInLeft"
+                                        width="50" height="50" alt="Le Running">
                                 </div>
-                            </li>
-                            <li class="mx-3 text-center ">
-                                <div class="mb-2 d-flex flex-column  ">
-                                    <div
-                                        class="img-container bg-color rounded-square d-flex align-items-center justify-content-center ">
-                                        <img src="images/art.png" class="img-fluid" width="50" height="50"
-                                            alt="Les arts">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">Les arts</span>
+                                <span class="fw-bold title-hobbie">Le Running</span>
+                            </div>
+                        </li>
+                        <li class="list-inline-item text-center">
+                            <div class="mb-2 d-flex flex-column">
+                                <div class="img-container bg-color rounded-square d-flex align-items-center justify-content-center">
+                                    <img src="images/art.png" class="img-fluid animation-left animate__animated animate__zoomIn"
+                                        width="50" height="50" alt="Les arts">
                                 </div>
-                            </li>
-                            <li class="mx-3 text-center">
-                                <div class="mb-2 d-flex flex-column">
-                                    <div
-                                        class="img-container bg-color rounded-square d-flex align-items-center justify-content-center ">
-                                        <img src="images/technologie.png" class="img-fluid" width="50" height="50"
-                                            alt="La technologie">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">La technologie</span>
+                                <span class="fw-bold title-hobbie">Les arts</span>
+                            </div>
+                        </li>
+                        <li class="list-inline-item text-center">
+                            <div class="mb-2 d-flex flex-column">
+                                <div class="img-container bg-color rounded-square d-flex align-items-center justify-content-center">
+                                    <img src="images/technologie.png" class="img-fluid animation-left animate__animated animate__zoomIn"
+                                        width="50" height="50" alt="La technologie">
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-    </section>
+                                <span class="fw-bold title-hobbie">La technologie</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
     <section id="parcours" class="p-5">
         <div class="container">
             <div class="row">
@@ -320,7 +315,7 @@
             </br>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
                 <div class="col">
-                    <div class="card">
+                    <div class="card zoom-on-hover">
                         <div class="card-body text-center">
                             <div class="h1 mb-3">
                                 <img src="images/projet1.png" alt="projet1" class="img-fluid" />
@@ -338,7 +333,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card zoom-on-hover">
                         <div class="card-body text-center">
                             <div class="h1 mb-3">
                                 <img src="images/projet2.png"  alt="projet1" class="img-fluid" />
@@ -356,7 +351,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card zoom-on-hover">
                         <div class="card-body text-center">
                             <div class="h1 mb-3">
                                 <img src="images/projet3.png" alt="projet1" class="img-fluid" />
@@ -374,7 +369,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card zoom-on-hover">
                         <div class="card-body text-center">
                             <div class="h1 mb-1">
                                 <img src="images/projet4.png" alt="projet1" class="img-fluid" />
