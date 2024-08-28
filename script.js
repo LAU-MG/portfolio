@@ -1,21 +1,3 @@
-// const sections = document.querySelectorAll("section");
-// const navLi = document.querySelectorAll("nav .container ul li");
-// window.onscroll = () => {
-//   var current = "";
-
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     if (pageYOffset >= sectionTop - 60) {
-//       current = section.getAttribute("id"); }
-//   });
-
-//   navLi.forEach((li) => {
-//     li.classList.remove("active");
-//     if (li.classList.contains(current)) {
-//       li.classList.add("active");
-//     }
-//   });
-// };
 document.addEventListener('DOMContentLoaded', function () {
   const scrollLinks = document.querySelectorAll('.navbar-nav a');
 
@@ -93,6 +75,54 @@ window.addEventListener('DOMContentLoaded', function() {
     timeline.addEventListener("scroll", callbackFunc);
   });
 })();
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Remove 'active' class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add 'active' class to the clicked button
+          button.classList.add('active');
+
+          // Get the category of the clicked button
+          const category = button.getAttribute('data-category');
+
+          // Show/hide gallery items based on the selected category
+          galleryItems.forEach(item => {
+              const itemCategory = item.getAttribute('data-category');
+              if (category === 'all' || itemCategory === category) {
+                  item.style.display = 'block';
+              } else {
+                  item.style.display = 'none';
+              }
+          });
+      });
+  });
+
+  // Trigger click on the 'Tous' button to show all items by default
+  document.querySelector('.filter-btn.active').click();
+});
+
+document.querySelectorAll('.category-title').forEach(title => {
+  title.addEventListener('click', () => {
+      const category = title.parentElement;
+      if (category.classList.contains('open')) {
+          category.classList.remove('open');
+      } else {
+          document.querySelectorAll('.competence-category').forEach(c => c.classList.remove('open'));
+          category.classList.add('open');
+      }
+  });
+});
+
+
+
+
+
+
+
 
 
 
