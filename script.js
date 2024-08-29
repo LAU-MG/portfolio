@@ -116,6 +116,22 @@ document.querySelectorAll('.category-title').forEach(title => {
       }
   });
 });
+document.getElementById('theme-toggle').addEventListener('click', function() {
+  // Vérifier si l'attribut data-theme est déjà défini sur 'dark'
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      // Si oui, on le supprime pour revenir au mode clair
+      document.documentElement.removeAttribute('data-theme');
+      // Modifier le texte du bouton
+      this.textContent = 'Mode Sombre';
+  } else {
+      // Sinon, on le définit sur 'dark' pour passer en mode sombre
+      document.documentElement.setAttribute('data-theme', 'dark');
+      // Modifier le texte du bouton
+      this.textContent = 'Mode Clair';
+  }
+});
+
+
 
 
 
