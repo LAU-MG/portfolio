@@ -1,7 +1,6 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
-  --header-bg: #007bff;
   --nav-link-color: #ffffff;
   --nav-link-hover-color: #f8f9fa;
   --timeline-border: #86D6FF;
@@ -20,7 +19,7 @@
   --alert-danger-border: #f5c6cb;
 }
 
-/* Variables pour le mode sombre */
+/* Variables for dark mode */
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #e0e0e0;
@@ -61,12 +60,72 @@ body {
   color: var(--nav-link-hover-color);
 }
 
-header {
-  background-color: var(--header-bg);
-  background-position: center;
+/* Styles pour le header */
+.header {
+  background-image: url('images/background.jpg');
   background-size: cover;
-  color: var(--text-color);
-  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay sombre */
+  z-index: 1;
+}
+
+.header .container {
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.scroll-arrow {
+  margin-top: 40px;
+}
+
+.scroll-arrow a {
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.scroll-arrow a:hover {
+  color: #007bff;
+}
+
+/* Animation du texte tapé */
+#typed-name {
+  border-right: 2px solid #fff;
+  font-family: 'Poppins', sans-serif;
+  display: inline;
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+/* Animation de clignotement du curseur */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
 }
 
 .history-tl-container {
@@ -162,7 +221,7 @@ h2.display-4 {
   font-weight: 300;
 }
 
-/* Style pour les boutons de filtre */
+/* Style for button filters */
 .filter-btn {
   border: none;
   background-color: #f8f9fa;
@@ -179,7 +238,7 @@ h2.display-4 {
   color: var(--nav-link-color);
 }
 
-/* Style pour la galerie */
+/* Style for galery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -273,89 +332,77 @@ h2.display-4 {
   margin-right: 10px;
 }
 
+/* Styles pour la section contact */
 #contact {
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
-  padding: 80px 0;
+  background-color: #f2f2f2;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-#contact h2 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 40px;
+.container-contact {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.form-control-lg {
-  border-radius: 12px;
-  border: 2px solid var(--form-border-color);
-  padding: 16px;
+/* Style pour le formulaire HubSpot */
+.hubspot-form {
+  padding: 20px;
+}
+
+.hubspot-form input,
+.hubspot-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
-  background-color: var(--form-bg);
-  transition: all 0.3s ease-in-out;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-control-lg:focus {
-  border-color: var(--form-focus-border);
-  box-shadow: 0 0 0 0.2rem var(--form-focus-shadow);
+/* Focus sur les champs du formulaire */
+.hubspot-form input:focus,
+.hubspot-form textarea:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
   outline: none;
 }
 
-textarea.form-control-lg {
-  resize: vertical;
-}
-
-.btn-primary {
-  background-color: var(--button-bg);
+/* Style pour le bouton */
+.hubspot-form button {
+  background-color: #0056b3;
+  color: #fff;
   border: none;
-  padding: 12px 24px;
-  font-size: 1.25rem;
-  border-radius: 12px;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 1rem;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: var(--button-hover-bg);
+.hubspot-form button:hover {
+  background-color: #004099;
 }
 
-.alert-success {
-  background-color: var(--alert-success-bg);
-  border-color: var(--alert-success-border);
-  color: var(--text-color);
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.alert-danger {
-  background-color: var(--alert-danger-bg);
-  border-color: var(--alert-danger-border);
-  color: var(--text-color);
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-/* Réglages pour le bouton de changement de thème */
-#theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: var(--button-bg);
-  color: var(--nav-link-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#theme-toggle:hover {
-  background-color: var(--button-hover-bg);
+/* Cache la phrase indésirable */
+.hubspot-form .hs-form-privacy-policy {
+  display: none;
 }

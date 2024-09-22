@@ -81,15 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-          // Remove 'active' class from all buttons
           filterButtons.forEach(btn => btn.classList.remove('active'));
-          // Add 'active' class to the clicked button
           button.classList.add('active');
 
-          // Get the category of the clicked button
           const category = button.getAttribute('data-category');
 
-          // Show/hide gallery items based on the selected category
           galleryItems.forEach(item => {
               const itemCategory = item.getAttribute('data-category');
               if (category === 'all' || itemCategory === category) {
@@ -101,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Trigger click on the 'Tous' button to show all items by default
   document.querySelector('.filter-btn.active').click();
 });
 
@@ -131,6 +126,25 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
   }
 });
 
+// Fonction pour taper le texte lettre par lettre
+function typeText(elementId, text, speed) {
+  let i = 0;
+  const element = document.getElementById(elementId);
+
+  function typeWriter() {
+      if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+      }
+  }
+  typeWriter();
+}
+
+// Appel de la fonction avec ton nom et prénom
+document.addEventListener("DOMContentLoaded", function() {
+  typeText("typed-name", "Laura MIGUEL", 150);
+});
 
 
 
