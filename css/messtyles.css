@@ -147,6 +147,16 @@ nav.navbar {
   from, to { border-color: transparent; }
   50% { border-color: white; }
 }
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.5; 
+}
 
 .history-tl-container {
   width: 100%;
