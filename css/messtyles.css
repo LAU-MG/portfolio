@@ -1,68 +1,69 @@
+/* Variables for dark mode */
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
   --nav-link-color: #ffffff;
   --nav-link-hover-color: #f8f9fa;
-  --timeline-border: #86D6FF;
-  --timeline-bg: #258CC7;
-  --skill-card-bg: #ffffff;
-  --skill-icon-color: #007bff;
-  --form-bg: transparent;
-  --form-border-color: #dee2e6;
-  --form-focus-border: #0056b3;
-  --form-focus-shadow: rgba(38, 143, 255, 0.25);
-  --button-bg: #007bff;
-  --button-hover-bg: #0056b3;
-  --alert-success-bg: #d4edda;
-  --alert-success-border: #c3e6cb;
-  --alert-danger-bg: #f8d7da;
-  --alert-danger-border: #f5c6cb;
+  --header-bg: #343a40;
+  --button-color: #007bff;
 }
 
-/* Variables for dark mode */
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --header-bg: #1f1f1f;
-  --nav-link-color: #e0e0e0;
-  --nav-link-hover-color: #c0c0c0;
-  --timeline-border: #86D6FF;
-  --timeline-bg: #258CC7;
-  --skill-card-bg: #1f1f1f;
-  --skill-icon-color: #bb86fc;
-  --form-bg: #2c2c2c;
-  --form-border-color: #444444;
-  --form-focus-border: #bb86fc;
-  --form-focus-shadow: rgba(187, 134, 252, 0.25);
-  --button-bg: #bb86fc;
-  --button-hover-bg: #3700b3;
-  --alert-success-bg: #388e3c;
-  --alert-success-border: #4caf50;
-  --alert-danger-bg: #d32f2f;
-  --alert-danger-border: #ef5350;
+  --button-color: #bb86fc;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* Navbar styling */
+.navbar {
+  background-color: var(--header-bg);
+  transition: background-color 0.3s ease;
 }
 
-.header,
-.navbar-dark .navbar-nav .nav-link {
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: var(--nav-link-color);
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:focus {
+.nav-link {
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: var(--nav-link-color);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
   color: var(--nav-link-hover-color);
 }
 
-/* Styles pour le header */
+/* Theme toggle button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--nav-link-color);
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  color: var(--button-color);
+}
+
+/* Dark/Light mode icons */
+#theme-icon {
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] #theme-icon {
+  color: #ffcc00;
+}
+
+
+/* Styles for header */
 .header {
-  background-image: url('images/background.jpg');
+  background-image: url('images/');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +82,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Overlay sombre */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark Overlay */
   z-index: 1;
 }
 
@@ -114,7 +115,7 @@ body {
   color: #007bff;
 }
 
-/* Animation du texte tapé */
+/* Animation of the text first name and last name */
 #typed-name {
   border-right: 2px solid #fff;
   font-family: 'Poppins', sans-serif;
@@ -122,7 +123,7 @@ body {
   animation: blink-caret 0.7s step-end infinite;
 }
 
-/* Animation de clignotement du curseur */
+/* Animation of blinking cursor */
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: white; }
@@ -133,7 +134,7 @@ body {
   margin: auto;
   position: relative;
   display: block;
-  margin-left: 150px; /* Décalage de 150px à droite */
+  margin-left: 150px;
 }
 
 ul.tl {

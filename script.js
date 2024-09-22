@@ -111,19 +111,38 @@ document.querySelectorAll('.category-title').forEach(title => {
       }
   });
 });
-document.getElementById('theme-toggle').addEventListener('click', function() {
-  // Vérifier si l'attribut data-theme est déjà défini sur 'dark'
-  if (document.documentElement.getAttribute('data-theme') === 'dark') {
-      // Si oui, on le supprime pour revenir au mode clair
-      document.documentElement.removeAttribute('data-theme');
-      // Modifier le texte du bouton
-      this.textContent = 'Mode Sombre';
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+
+  // Vérifie le thème actuel
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
   } else {
-      // Sinon, on le définit sur 'dark' pour passer en mode sombre
-      document.documentElement.setAttribute('data-theme', 'dark');
-      // Modifier le texte du bouton
-      this.textContent = 'Mode Clair';
+      document.body.setAttribute('data-theme', 'light');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
   }
+
+  themeToggle.addEventListener('click', () => {
+      const isDark = document.body.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+          // Passer en thème clair
+          document.body.setAttribute('data-theme', 'light');
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+          localStorage.setItem('theme', 'light');
+      } else {
+          // Passer en thème sombre
+          document.body.setAttribute('data-theme', 'dark');
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+          localStorage.setItem('theme', 'dark');
+      }
+  });
 });
 
 // Fonction pour taper le texte lettre par lettre
