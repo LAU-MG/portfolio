@@ -1,4 +1,4 @@
-/* Variables for dark mode */
+/* Variables for light mode */
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -8,11 +8,30 @@
   --button-color: #007bff;
 }
 
+/* Variables for dark mode */
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --header-bg: #1f1f1f;
   --button-color: #bb86fc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+nav.navbar {
+  background-color: var(--header-bg);
+}
+
+.btn {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+}
+
+.btn:hover {
+  background-color: var(--nav-link-hover-color);
 }
 
 /* Navbar styling */
