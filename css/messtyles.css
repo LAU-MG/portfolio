@@ -21,72 +21,66 @@ body {
   color: var(--text-color);
 }
 
-nav.navbar {
-  background-color: var(--header-bg);
+/* Style de la barre de navigation en mode "Dynamic Island" */
+.island-navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1030;
 }
 
-.btn {
-  background-color: var(--button-color);
-  border-color: var(--button-color);
-}
-
-.btn:hover {
-  background-color: var(--nav-link-hover-color);
-}
-
-/* Navbar styling */
-.navbar {
-  background-color: var(--header-bg);
-  transition: background-color 0.3s ease;
+.island-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--nav-link-color);
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .nav-link {
-  margin-right: 20px;
-  font-size: 1.1rem;
-  color: var(--nav-link-color);
-  transition: color 0.3s ease;
+  color: #ddd;
+  margin: 0 8px;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: var(--nav-link-hover-color);
+  color: #fff;
 }
 
-/* Theme toggle button */
-#theme-toggle {
-  background: none;
+.island-theme-btn {
+  background: transparent;
   border: none;
-  font-size: 1.5rem;
-  color: var(--nav-link-color);
-  cursor: pointer;
+  color: #ddd;
+  margin-left: 15px;
+  transition: color 0.3s;
 }
 
-#theme-toggle:hover {
-  color: var(--button-color);
+.island-theme-btn:hover {
+  color: #fff;
 }
 
-/* Dark/Light mode icons */
-#theme-icon {
-  transition: color 0.3s ease;
-}
-
-[data-theme="dark"] #theme-icon {
-  color: #ffcc00;
+.navbar-toggler {
+  border: none;
 }
 
 
-/* Styles for header */
+
+/*HEADER */
 .header {
-  background-image: url('images/');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +131,9 @@ nav.navbar {
 /* Animation of the text first name and last name */
 #typed-name {
   border-right: 2px solid #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;  
+
+
   display: inline;
   animation: blink-caret 0.7s step-end infinite;
 }
@@ -148,7 +144,7 @@ nav.navbar {
   50% { border-color: white; }
 }
 .video-background {
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
@@ -204,7 +200,7 @@ ul.tl li:hover::before {
 }
 
 ul.tl li .item-title {
-  font-weight: 600;
+   font-weight: 600;
   font-size: 16px;
   margin-bottom: 5px;
 }
@@ -221,6 +217,12 @@ ul.tl li .timestamp {
   left: -150px;
   text-align: right;
   font-size: 14px;
+}
+
+/*A PROPOS */
+.img-fluid {
+  max-width: 60%;
+  height: auto;
 }
 
 /* Responsive adjustments */
@@ -312,37 +314,62 @@ h2.display-4 {
 }
 
 /* Style pour la section Compétences */
+/* Section générale */
 #competences {
-  padding: 60px 0;
+  background-color: #f8f9fa;
 }
 
+#competences h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Disposition Masonry */
+.skills-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Cartes de compétences */
 .skill-card {
-  background: var(--skill-card-bg);
+  background-color: #ffffff;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
+  text-align: center;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Cartes asymétriques */
+.tall-card {
+  grid-row: span 2;
+}
+
+.wide-card {
+  grid-column: span 2;
+}
+
+/* Icônes */
 .skill-icon {
-  font-size: 50px;
-  color: var(--skill-icon-color);
-  margin-bottom: 15px;
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
 .skill-card h3 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  color: #333;
   margin-bottom: 15px;
 }
 
+/* Liste des compétences */
 .skill-list {
   list-style: none;
   padding: 0;
@@ -350,16 +377,34 @@ h2.display-4 {
 }
 
 .skill-list li {
-  font-size: 1.2rem;
-  margin: 10px 0;
   display: flex;
   align-items: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+  transition: color 0.3s;
 }
 
-.skill-list i {
-  font-size: 1.5rem;
-  color: var(--skill-icon-color);
+.skill-list li i {
   margin-right: 10px;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.skill-list li:hover {
+  color: #333;
+}
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+  .skill-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cartes par ligne */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+      flex: 1 1 100%; /* 1 carte par ligne (les cartes sont empilées) */
+  }
 }
 
 /* Styles pour la section contact */
