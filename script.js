@@ -165,6 +165,24 @@ document.addEventListener("DOMContentLoaded", function() {
   typeText("typed-name", "Laura MIGUEL", 150);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+
+  // Fonction pour gérer la classe shrink au défilement
+  const handleScroll = () => {
+      if (window.scrollY > 100) { // Si l'utilisateur a défilé de plus de 100px
+          navbar.classList.add("shrink"); // Ajouter la classe shrink
+      } else {
+          navbar.classList.remove("shrink"); // Retirer la classe shrink
+      }
+  };
+
+  // Écouter l'événement de défilement
+  window.addEventListener("scroll", handleScroll);
+});
+
+
+
 
 
 

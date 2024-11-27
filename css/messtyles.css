@@ -20,8 +20,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
-/* Style de la barre de navigation en mode "Dynamic Island" */
+/* Apparence normale de la navbar */
 .island-navbar {
   position: fixed;
   top: 10px;
@@ -34,6 +33,7 @@ body {
   max-width: 1000px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
   z-index: 1030;
+  transition: all 0.3s ease;
 }
 
 .island-container {
@@ -58,11 +58,11 @@ body {
 }
 
 .island-theme-btn {
-  background: transparent;
+  background-color: transparent;
   border: none;
-  color: #ddd;
-  margin-left: 15px;
-  transition: color 0.3s;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .island-theme-btn:hover {
@@ -72,6 +72,97 @@ body {
 .navbar-toggler {
   border: none;
 }
+
+/* Styles pour la navbar */
+.island-navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1030;
+  transition: all 0.3s ease;
+}
+
+.island-navbar.shrink {
+  top: 20px;
+  right: 20px;
+  left: auto;
+  transform: none;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+/* Styles du menu à bulles */
+.bubbles-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.menu-bubble {
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-bubble:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.menu-bubble i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Animation */
+.bubbles-menu.show {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
 
 
 
