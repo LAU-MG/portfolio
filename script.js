@@ -160,28 +160,26 @@ function typeText(elementId, text, speed) {
   typeWriter();
 }
 
-// Appel de la fonction avec ton nom et prénom
-document.addEventListener("DOMContentLoaded", function() {
-  typeText("typed-name", "Laura MIGUEL", 150);
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
+  const bubblesMenu = document.getElementById("bubbles-menu");
 
-  // Fonction pour gérer la classe shrink au défilement
+  // Fonction pour gérer la transition shrink et disparition de la navbar normale
   const handleScroll = () => {
-      if (window.scrollY > 100) { // Si l'utilisateur a défilé de plus de 100px
-          navbar.classList.add("shrink"); // Ajouter la classe shrink
+      if (window.scrollY > 100) {
+          navbar.classList.add("shrink"); // Rétrécir la navbar
+          navbar.classList.add("fade-out"); // Faire disparaître la navbar
+          bubblesMenu.classList.add("show"); // Afficher le menu à bulles
       } else {
-          navbar.classList.remove("shrink"); // Retirer la classe shrink
+          navbar.classList.remove("shrink"); // Restaurer la navbar
+          navbar.classList.remove("fade-out"); // Annuler la disparition
+          bubblesMenu.classList.remove("show"); // Masquer le menu à bulles
       }
   };
 
   // Écouter l'événement de défilement
   window.addEventListener("scroll", handleScroll);
 });
-
-
 
 
 

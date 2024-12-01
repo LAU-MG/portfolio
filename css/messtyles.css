@@ -20,109 +20,60 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-/* Apparence normale de la navbar */
+/* Apparence normale de la navbar en mode island */
 .island-navbar {
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.75);
-  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.75); /* Fond semi-transparent */
+  border-radius: 30px; /* Coins arrondis */
   padding: 10px 20px;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 90%; /* Largeur relative */
+  max-width: 1000px; /* Largeur maximale */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
   z-index: 1030;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Transition douce pour les changements */
 }
 
-.island-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Animation pour faire disparaître la navbar au scroll */
+.island-navbar.fade-out {
+  animation: fadeOut 0.5s forwards;
 }
 
-.navbar-brand {
-  font-size: 1.2rem;
-  color: #fff;
+/* Animation de disparition de la navbar */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-50px); /* Déplace la navbar vers le haut */
+  }
 }
 
-.nav-link {
-  color: #ddd;
-  margin: 0 8px;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #fff;
-}
-
-.island-theme-btn {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.island-theme-btn:hover {
-  color: #fff;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-/* Styles pour la navbar */
-.island-navbar {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.75);
-  border-radius: 30px;
-  padding: 10px 20px;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  z-index: 1030;
-  transition: all 0.3s ease;
-}
-
+/* Rétrécissement de la navbar au scroll */
 .island-navbar.shrink {
-  top: 20px;
-  right: 20px;
-  left: auto;
-  transform: none;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  opacity: 0.9;
+  background: rgba(0, 0, 0, 1); /* Fond opaque */
+  padding: 5px 20px; /* Réduire la taille */
 }
 
-/* Styles du menu à bulles */
+/* Menu à bulles */
 .bubbles-menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  display: none; /* Masqué par défaut */
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1040;
 }
 
+/* Bulles du menu */
 .menu-bubble {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #333;
   border-radius: 50%;
   display: flex;
@@ -136,35 +87,34 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Effet au survol des bulles */
 .menu-bubble:hover {
   background-color: #555;
   transform: scale(1.1);
 }
 
 .menu-bubble i {
-  font-size: 20px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 3px;
 }
 
-/* Animation */
+/* Affichage du menu rétréci */
 .bubbles-menu.show {
   display: flex;
   animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Animation de transition d'apparition */
 @keyframes fadeIn {
   from {
       opacity: 0;
-      transform: scale(0.9);
+      transform: translateY(10px);
   }
   to {
       opacity: 1;
-      transform: scale(1);
+      transform: translateY(0);
   }
 }
-
-
-
 
 /*HEADER */
 .header {
