@@ -1,427 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Laura MIGUEL</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="css/messtyles.css">
-    <link href="images/favicon.png" rel="icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <script charset="utf-8" type="text/javascript" src="v2.js"></script>
-
-    <title>Portfolio - MIGUEL Laura</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark nav-transparent">
-        <a class="navbar-brand" href="index.html"><span class="logo-title">MIGUEL Laura</span> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto ">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#accueil">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#propos">A propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#parcours">Mon parcours</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#competence">Compétences</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projets">Mes projets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contactez-moi</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item-icon ">
-                    <a href="https://www.linkedin.com/in/laura-miguel-6443a5235/" target="_blank">
-                        <i class="ri ri-linkedin-fill"></i>
-                </li>
-                </a>
-                <li class="nav-item-icon">
-                    <a href="https://github.com/LAU-MG" target="_blank">
-                        <i class="ri ri-github-fill"></i>
-                    </a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top island-navbar" id="navbar">
+        <div class="container island-container">
+            <a class="navbar-brand" href="#">Laura MIGUEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto" id="menu-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#propos">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parcours">Parcours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projets">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn island-theme-btn">
+                            <span id="theme-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <section id="accueil" class=" p-4 p-lg-0 pt-lg-5 d-flex align-items-center ">
+    
+    <!-- Menu rétréci à bulles -->
+    <div class="bubbles-menu" id="bubbles-menu">
+        <a href="#accueil" class="menu-bubble"><i class="fas fa-home"></i><span>Accueil</span></a>
+        <a href="#propos" class="menu-bubble"><i class="fas fa-user"></i><span>À Propos</span></a>
+        <a href="#parcours" class="menu-bubble"><i class="fas fa-briefcase"></i><span>Parcours</span></a>
+        <a href="#competences" class="menu-bubble"><i class="fas fa-chart-line"></i><span>Compétences</span></a>
+        <a href="#projets" class="menu-bubble"><i class="fas fa-project-diagram"></i><span>Projets</span></a>
+        <a href="#contact" class="menu-bubble"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+    
+    
+    
+     
+    <!-- Accueil -->
+    <header id="accueil" class="header d-flex align-items-center justify-content-center text-center text-light">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="video-background">
+            <source src="media/header.mp4" type="video/mp4">
+            <!--Vidéo de Gabriel Lima: https://www.pexels.com/fr-fr/video/lumieres-ordinateur-clavier-couleurs-8466352/-->
+        </video>
+        <div class="container" data-aos="fade-down">
+            <h1 id="dynamic-name" class="display-4 fw-bold">Bonjour, je suis <span id="typed-name"></span></h1>
+            <p class="lead mb-4">Développeuse Full-Stack </p>
+            <a href="#contact" class="btn btn-primary btn-lg">Contactez-moi</a>
+            <div class="scroll-arrow mt-4">
+                <a href="#propos" class="btn btn-light"><i class="ri-arrow-down-line"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- À Propos -->
+    <section id="propos" class="py-5 bg-light" data-aos="fade-up">
         <div class="container">
-            <h1 class="mt-5">Développeuse <span class=" text-competence"> Full-stack </span></h1>
-            <p class="lead my-2">
-                Mon portfolio présente en détail mes expériences professionnelles,compétences et projets.
-                Il y à également des liens vers du contenu lié à mon travail.
-            </p>
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down fa-3x"></i>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="images/photoHome.JPG" class="img-fluid rounded-circle mb-3" alt="Laura MIGUEL">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="display-4 mb-4">À Propos</h2>
+                    <p>Passionnée par le développement web, j'ai acquis des compétences solides en tant que développeuse
+                        full-stack. Mon objectif est de créer des applications innovantes et fonctionnelles.</p>
+                    <a href="docs/MIGUEL_Laura_CV.pdf" class="btn btn-outline-dark mt-3" target="_blank">
+                        <i class="ri-file-download-line"></i> Voir mon CV
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    <section id="propos" class="p-3 p-md-5">
+
+    <section id="parcours" class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="d-sm-flex align-items-center justify-content-between">
-                    <img class="img-fluid w-25 mx-4 d-none d-sm-block rounded-image " src="images/photoHome.JPG"
-                        alt="" />
-                    <div class="col-md-4">
-                        <h2 class="title-propos"><i class="ri-user-line color-icon"> </i>Qui suis-je ?</h2>
-                        <p class="item-propos">
-                           <span class="fw-bold text-left">MIGUEL Laura</span>
-                        </br> 
-                            Etudiante en troisième année de licence professionnelle MIAW (Métiers de l'Informatique :
-                            Applications Web) à l'IUT d'Évry,
-                            je me spécialise en tant que développeuse full-stack.
-                        </p>
-                        <a href="docs/MIGUEL_Laura_CV.pdf"
-                            class="mt-3  button-cv rounded-pill text-dark fw-bold text-decoration-none"
-                           target="_blank">
-                            <i class="ri-link mr-2"></i> Voir mon CV
-                    </a>
-                    </div>
-                    <div class="col-md-4 order-md-2 order-1">
-                        <h2 class="title-propos "><i class="ri ri-heart-fill color-icon"> </i> Ce que j'apprécie</i>
-                        </h2>
-                        <ul class="d-inline-flex jusitfy icon-propos ">
-                            <li class="mx-3 text-center">
-                                <div class="mb-2 d-flex flex-column ">
-                                    <div class="img-container bg-color rounded-square d-flex align-items-center justify-content-center">
-                                        <img src="images/running.png" class="img-fluid align-items-center animation-left animate__animated animate__fadeInLeft" width="50" height="50" alt="Le Running">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">Le Running</span>
+            <h2 class="display-4 mb-4 text-center">Parcours</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="history-tl-container">
+                        <ul class="tl">
+                            <li class="tl-item">
+                                <div class="timestamp">
+                                    2023
                                 </div>
+                                <div class="item-title">Diplôme Développeur Web</div>
+                                <div class="item-detail">Obtention du diplôme chez OpenClassrooms.</div>
                             </li>
-                            
-                            <li class="mx-3 text-center ">
-                                <div class="mb-2 d-flex flex-column  ">
-                                    <div
-                                        class="img-container bg-color rounded-square d-flex align-items-center justify-content-center ">
-                                        <img src="images/art.png" class="img-fluid animation-left animate__animated animate__zoomIn" width="50" height="50"
-                                            alt="Les arts">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">Les arts</span>
+                            <li class="tl-item">
+                                <div class="timestamp">
+                                    2022
                                 </div>
+                                <div class="item-title">Freelance Développement Web</div>
+                                <div class="item-detail">Lancement en tant que développeur indépendant.</div>
                             </li>
-                            <li class="mx-3 text-center">
-                                <div class="mb-2 d-flex flex-column">
-                                    <div
-                                        class="img-container bg-color rounded-square d-flex align-items-center justify-content-center ">
-                                        <img src="images/technologie.png" class="img-fluid animation-left animate__animated animate__zoomIn" width="50" height="50"
-                                            alt="La technologie">
-                                    </div>
-                                    <span class="fw-bold title-hobbie">La technologie</span>
+                            <li class="tl-item">
+                                <div class="timestamp">
+                                    2021
                                 </div>
+                                <div class="item-title">Stage chez XYZ</div>
+                                <div class="item-detail">Expérience pratique dans le développement web.</div>
+                            </li>
+                            <li class="tl-item">
+                                <div class="timestamp">
+                                    2020
+                                </div>
+                                <div class="item-title">Hackathon Participation</div>
+                                <div class="item-detail">Participation à un hackathon de renom.</div>
+                            </li>
+                            <li class="tl-item">
+                                <div class="timestamp">
+                                    2019
+                                </div>
+                                <div class="item-title">Bachelor Informatique</div>
+                                <div class="item-detail">Diplôme obtenu à l'Université de Paris.</div>
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="parcours" class="p-5">
+    <!-- Compétences -->
+    <section id="competences" class="py-5 bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-12 mb-4">
-                    <h2 class="text-left mb-4 mt-5 parcours-title">Mon parcours professionnel</h2>
-                    <div class="card-equal">
-                        <div class="card-body">
-                            <ul class="list-unstyled ">
-                                <li class="mb-4">
-                                    <p class="lead fw-bold"> Depuis le 11 septembre 2023 MARC GAVANIER SAS LYON 5</p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-briefcase-fill ri-lg"></i>
-                                        Alternance licence professionelle </p>
-                                    <p>Développement FullStack.
-                                        Travail fait en TDD.
-                                    </p>
-                                    </br>
-                                    </br>
-                                </li>
-                                <li class="mb-4">
-                                    <p class="lead fw-bold">10 JANVIER - 18 FÉVRIER 2022 DANEM PEOPLE LYON 69003</p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-briefcase-fill ri-lg"></i>
-                                        Stage de deuxième année en BTS SIO. </p>
-                                    <p>Développement Front-end et Low-code
-                                        Création sous CMS Market Grabber (utilisation
-                                        des langages HTML, CSS, JavaScript).
-                                        Gestion DNS/Serveur FTP.
-                                    </p>
-                                </li>
-                                <li class="mb-4">
-                                    <p class="lead fw-bold">17 MAI - 25 JUIN 2021 KPOS BUSINESS VILLEURBANNE, 69100 </p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-briefcase-fill ri-lg"></i>
-                                        Stage de première année en BTS SIO. </p>
-                                    <p>Développement Low-Code
-                                        Création et modification graphique des sites
-                                        sous CMS (WordPress), SEO et hébergement
-                                        (OVH).
-                                    </p>
-                                    </br>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <h2 class="display-4 mb-5 text-center">Mes Compétences</h2>
+            <div class="skills-masonry">
+                <!-- Langages -->
+                <div class="skill-card tall-card">
+                    <h3>Langages</h3>
+                    <ul class="skill-list">
+                        <li><i class="devicon-html5-plain"></i> HTML5</li>
+                        <li><i class="devicon-css3-plain"></i> CSS3</li>
+                        <li><i class="devicon-javascript-plain"></i> JavaScript</li>
+                        <li><i class="devicon-java-plain"></i> Java</li>
+                        <li><i class="devicon-mysql-plain"></i> SQL</li>
+                        <li><i class="devicon-php-plain"></i> PHP</li>
+                        <li><i class="devicon-csharp-plain"></i> C#</li>
+                        <li><i class="devicon-python-plain"></i> Python</li>
+                        <li><i class="devicon-typescript-plain"></i> TypeScript</li>
+                    </ul>
                 </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <h2 class="text-left mb-4 mt-5 parcours-title">Mon parcours scolaire</h2>
-                    <div class="card-equal">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="mb-4 ">
-                                    <p class="lead fw-bold"> Depuis le 11 septembre 2023 IUT d’Évry Val d’Essonne</p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-award-fill ri-lg"></i>
-                                        Licence Pro MIAW </p>
-                                    <p>Admise en Licence professionnelle MIAW
-                                        (Métiers de l’Informatique: Applications Web)
-                                        parcours DAWI (Développement avancé
-                                        d’Applications Web Internet et Intranet).
-                                    </p>
-                                </li>
-                                <li class="mb-4">
-                                    <p class="lead fw-bold">2020 - 2022 Lycée La Martinière duchère LYON 9 </p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-award-fill ri-lg"></i> BTS
-                                        SIO </p>
-                                    <p>BTS SIO (Services informatique aux
-                                        Organisations), option SLAM( Solutions
-                                        Logicielles et Applications Métiers).
-                                    </p>
-                                </li>
-                                <li class="mb-4">
-                                    <p class="lead fw-bold">2019 - 2020 Université jean moulin lyon 3 </p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-award-fill ri-lg"></i>
-                                        LICENCE LEA </p>
-                                    <p>Première Année de Licence LEA(Langues
-                                        Étrangères Appliquées), Anglais-Portugais
-                                    </p>
-                                </li>
-                                <li>
-                                    <p class="lead fw-bold">2017 - 2019 Lycée Édouard Hérriot lyon 6 </p>
-                                    <p class="float-left fw-bold  text-competence"><i class="ri-award-fill ri-lg"></i> Bac
-                                        STMG </p>
-                                    <p>Bac STMG (Sciences et Technologies du
-                                        Management, et de la Gestion),option Mercatique.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
+                <!-- Frameworks -->
+                <div class="skill-card">
+                    <h3>Frameworks</h3>
+                    <ul class="skill-list">
+                        <li><i class="devicon-react-original"></i> React</li>
+                        <li><i class="devicon-laravel-plain"></i> Laravel</li>
+                    </ul>
+                </div>
+                <!-- Bases de Données -->
+                <div class="skill-card wide-card">
+                    <div class="skill-icon">
+                        <i class="ri-database-fill"></i>
                     </div>
+                    <h3>Bases de Données</h3>
+                    <ul class="skill-list">
+                        <li><i class="devicon-mysql-plain"></i> MySQL</li>
+                        <li><i class="devicon-mongodb-plain"></i> MongoDB</li>
+                    </ul>
+                </div>
+                <!-- CMS -->
+                <div class="skill-card">
+                    <h3>CMS</h3>
+                    <ul class="skill-list">
+                        <li><i class="devicon-wordpress-plain"></i> WordPress</li>
+                        <li><img src="images/logo-joomla.png" alt=" Joomla" style="width: 24px; height: 24px;">  Joomla</li>
+    <li><img src="images/Strapi_logo.png" alt=" Strapi" style="width: 24px; height: 24px;">  Strapi</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section id="competence" class="p-5">
-        <div class="row ml-3">
-            <div class="col-md-4 order-md-1 text-start bg-color d-flex align-items-center ">
-                <h1 class="mb-3 text-dark fw-bold display-4 mx-auto ms-3">Mes compétences techniques.</h1>
+    <section id="projets" class="py-5">
+        <div class="container">
+            <h2 class="display-4 mb-4 text-center">Mes Projets</h2>
+            <div class="text-center mb-4">
+                <button class="filter-btn active" data-category="all">Tous</button>
+                <button class="filter-btn" data-category="entreprise">Entreprise</button>
+                <button class="filter-btn" data-category="ecole">École</button>
+                <button class="filter-btn" data-category="personnel">Personnel</button>
             </div>
-            <div class="col-md-6 order-md-2 mb-5 ">
-                <div class="row justify-content-center ml-3">
-                    <div class="col-md-10">
-                        <h2 class="mb-2 text-center">Langages</h2>
-                        <br>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/html.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">HTML5</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/css.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">CSS3</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/js.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Javascript</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/python.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Python</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/sql.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">SQL</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/java.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">JAVA</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/csharp.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Csharp</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 item-competence">
-                                <img src="images/typescript.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Typescript</p>
-                            </div>
-                        </div>
+            <div class="gallery">
+                <div class="gallery-item" data-category="entreprise">
+                    <img src="images/projet1.png" alt="Projet 1">
+                    <div class="overlay">
+                        <h3>Projet 1: Site E-commerce</h3>
+                        <p>2023 - Entreprise XYZ</p>
                     </div>
                 </div>
-                <hr class="my-4 b-warning">
-                <div class="row justify-content-center">
-                    <div class="col-md-10 p-3">
-                        <h2 class="mb-4 text-center">Frameworks</h2>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
-                            <div class="col-md-4 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/bootstrap.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Bootstrap</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/laravel.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Laravel</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/angular.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Angular</p>
-                            </div>
-                        </div>
-                        <hr class="my-4 b-warning">
-                        <h2 class="mb-4 text-center">CMS</h2>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-3">
-
-                            <div class="col-md-6 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/wordpress.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Wordpress</p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/joomla.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Joomla</p>
-                            </div>
-                        </div>
-                        <hr class="my-4 b-warning">
-                        <h2 class="mb-2 text-center">Certifications</h2>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-3">
-                            <div class="col-md-6 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/pix.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">Pix</p>
-                            </div>
-                            <div class="col-md-6 col-sm-6 mb-3 img-center item-competence">
-                                <img src="images/anssi.png" alt="icon-parcours" class="img-fluid">
-                                <p class="mt-2">ANSSI</p>
-                            </div>
-                        </div>
+                <div class="gallery-item" data-category="ecole">
+                    <img src="images/projet2.png" alt="Projet 2">
+                    <div class="overlay">
+                        <h3>Projet 2: Application de Gestion</h3>
+                        <p>2022 - Université ABC</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="personnel">
+                    <img src="images/projet3.png" alt="Projet 3">
+                    <div class="overlay">
+                        <h3>Projet 3: Portfolio</h3>
+                        <p>2021 - Personnel</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projets" class="p-5">
-        <div class="container d-flex  flex-column">
-            <h1 class="mb-3 text-center text-dark fw-bold display-6">Projets</h1>
-            </br>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
-                <div class="col">
-                    <div class="card zoom-on-hover">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <img src="images/projet1.png" alt="projet1" class="img-fluid" />
-                            </div>
-                            <h3 class="card-title mb-3">Prosperous Vodka</h3>
-                            <p class="card-text">
-                                Site web sous WordPress sur la promotion de vodka.
-                            </p>
-                            <a href="projet1.html" class="link-pj"><i class="ri-link mr-2"></i> Détails</a>
-                            <br>
-                            <a href="https://prosperousvodka.com/" class="btn btn-dark rounded-pill "
-                                target="_blank">Voir le site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card zoom-on-hover">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <img src="images/projet2.png"  alt="projet1" class="img-fluid" />
-                            </div>
-                            <h3 class="card-title mb-3">KPOS BUSINESS</h3>
-                            <p class="card-text">
-                                Site vitre de l'entreprise sous WordPress .
-                            </p>
-                            <a href="projet1.html" class="link-pj"><i class="ri-link mr-2"></i> Détails</a>
-                            <br>
-                            <a href="https://kposbusiness.com/" class="btn btn-dark rounded-pill " target="_blank">Voir
-                                le site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card zoom-on-hover">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <img src="images/projet3.png" alt="projet1" class="img-fluid" />
-                            </div>
-                            <h3 class="card-title mb-3">Elec-Jobs</h3>
-                            <p class="card-text">
-                                Site web sous CMS sur la recherche d'emploi.
-                            </p>
-                            <a href="projet2.html" class="link-pj"><i class="ri-link mr-2"></i> Détails</a>
-                            <br>
-                            <a href="https://www.elec-jobs.fr/" class="btn btn-dark rounded-pill " target="_blank">Voir
-                                le site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card zoom-on-hover">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-1">
-                                <img src="images/projet4.png" alt="projet1" class="img-fluid" />
-                            </div>
-                            <h3 class="card-title mb-4">Cartographie nationale</h3>
-                            <p class="card-text">
-                                Site web en angular.
-                            </p>
-                            <a href="projet3.html"class="link-pj"><i class="ri-link mr-2"></i> Détails</a>
-                            <br>
-                            <a href="https://cartographie.societenumerique.gouv.fr/orientation"
-                                class="btn btn-dark rounded-pill " target="_blank">Voir le site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <!-- Contact -->
     <section id="contact" class="p-5">
-        <div class="container">
-            <h2>Contactez-moi</h2>
-            <div class="hubsport-form">
+        <div class="container-contact">
+            <h2 class="contact-title ">Contactez-moi</h2>
+            <div class="hubspot-form">
                 <script>
-                    hbspt.forms.create({
-                        region: "eu1",
-                        portalId: "144087335",
-                        formId: "3f2a6ae9-86e4-4e80-810a-acf17faac425"
-                    });
+                    try {
+                        hbspt.forms.create({
+                            region: "eu1",
+                            portalId: "144087335",
+                            formId: "3f2a6ae9-86e4-4e80-810a-acf17faac425"
+                        });
+                    } catch (error) {
+                        console.error("Erreur lors du chargement du formulaire HubSpot : ", error);
+                    }
                 </script>
             </div>
+        </div>
     </section>
-    <footer class="p-5 text-center position-relative">
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-light text-center">
         <div class="container">
-            <a href="#" class="position-absolute bottom-0 end-0 p-5 ">
-                <i class="bi bi-arrow-up-circle h1" style="color: #ffb777;"></i>
-            </a>
+            <p>&copy; 2024 Laura MIGUEL.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    // Validation du formulaire de contact
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
 
+        // Simulate sending form data
+        const formMessage = document.getElementById('form-message');
+        formMessage.innerHTML = '<div class="alert alert-success">Merci pour votre message. Je vous répondrai dès que possible.</div>';
 
-
-
-
+        // Reset form
+        this.reset();
+    });
+</script>
 </body>
 
 </html>
