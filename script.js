@@ -159,31 +159,44 @@ function typeText(elementId, text, speed) {
   }
   typeWriter();
 }
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
-  const bubblesMenu = document.getElementById("bubbles-menu");
+  const menuBubbleContainer = document.getElementById("menu-bubble-container");
+  const mainBubble = document.getElementById("menu-toggle");
+  const bubbleItems = document.getElementById("bubble-items");
 
-  // Fonction pour gérer la transition shrink et disparition de la navbar normale
+  // Gestion du scroll
   const handleScroll = () => {
-      if (window.scrollY > 100) {
-          navbar.classList.add("shrink"); // Rétrécir la navbar
-          navbar.classList.add("fade-out"); // Faire disparaître la navbar
-          bubblesMenu.classList.add("show"); // Afficher le menu à bulles
-      } else {
-          navbar.classList.remove("shrink"); // Restaurer la navbar
-          navbar.classList.remove("fade-out"); // Annuler la disparition
-          bubblesMenu.classList.remove("show"); // Masquer le menu à bulles
-      }
+    if (window.scrollY > 100) {
+      navbar.style.display = "none"; // Cacher la navbar normale
+      menuBubbleContainer.style.display = "flex"; // Afficher le menu rétréci
+    } else {
+      navbar.style.display = "flex"; // Réafficher la navbar normale
+      menuBubbleContainer.style.display = "none"; // Cacher le menu rétréci
+      bubbleItems.style.display = "none"; // Assurez-vous que les bulles sont cachées si le menu rétréci disparaît
+    }
   };
+
+  // Gestion du clic sur la bulle principale
+  mainBubble.addEventListener("click", () => {
+    // Basculer l'affichage des bulles secondaires
+    if (bubbleItems.style.display === "flex") {
+      bubbleItems.style.display = "none"; // Masquer les bulles secondaires
+    } else {
+      bubbleItems.style.display = "flex"; // Afficher les bulles secondaires
+    }
+  });
+
+  // Masquer les bulles secondaires lors d'un clic extérieur
+  document.addEventListener("click", (event) => {
+    if (!menuBubbleContainer.contains(event.target) && bubbleItems.style.display === "flex") {
+      bubbleItems.style.display = "none"; // Masquer les bulles secondaires
+    }
+  });
 
   // Écouter l'événement de défilement
   window.addEventListener("scroll", handleScroll);
 });
-
-
-
-
 
 
 

@@ -60,51 +60,67 @@ body {
 }
 
 /* Menu à bulles */
-.bubbles-menu {
+/* Container principal pour la bulle */
+.menu-bubble-container {
   position: fixed;
-  top: 100px;
-  right: 20px;
-  display: none; /* Masqué par défaut */
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1040;
+  top: 20px; /* Distance depuis le haut */
+  right: 20px; /* Distance depuis le bord droit */
+  z-index: 1050;
+  display: none;  flex-direction: column;
+  align-items: center;
 }
 
-/* Bulles du menu */
-.menu-bubble {
-  width: 50px;
-  height: 50px;
+/* Bulle principale */
+.main-bubble {
+  width: 60px;
+  height: 60px;
   background-color: #333;
+  color: #fff;
   border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: #fff;
-  font-size: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-/* Effet au survol des bulles */
-.menu-bubble:hover {
-  background-color: #555;
+.main-bubble:hover {
   transform: scale(1.1);
 }
 
-.menu-bubble i {
-  font-size: 18px;
-  margin-bottom: 3px;
+/* Bulles secondaires */
+.bubble-items {
+  display: none;
+  position: absolute;
+  top: 80px; /* Distance entre les bulles secondaires et la bulle principale */
+  right: 0; /* Aligné à droite */
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+  align-items: center;
 }
 
-/* Affichage du menu rétréci */
-.bubbles-menu.show {
-  display: flex;
-  animation: fadeIn 0.5s ease-in-out;
+.bubble-item {
+  width: 50px;
+  height: 50px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Animation de transition d'apparition */
+.bubble-item:hover {
+  background-color: #777;
+  transform: scale(1.1);
+}
+
+/* Animation pour les bulles */
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -115,6 +131,7 @@ body {
       transform: translateY(0);
   }
 }
+
 
 /*HEADER */
 .header {
