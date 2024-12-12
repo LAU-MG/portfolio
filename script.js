@@ -146,6 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Fonction pour taper le texte lettre par lettre
+document.addEventListener("DOMContentLoaded", () => {
+  const firstName = "Laura Miguel"; 
+  const typingSpeed = 100; 
+
+  typeText("typed-name", firstName, typingSpeed);
+});
+
 function typeText(elementId, text, speed) {
   let i = 0;
   const element = document.getElementById(elementId);
@@ -159,6 +166,7 @@ function typeText(elementId, text, speed) {
   }
   typeWriter();
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const menuBubbleContainer = document.getElementById("menu-bubble-container");
