@@ -206,6 +206,22 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScroll);
 });
 
+document.querySelector('.scroll-btn.left').addEventListener('click', function() {
+  const gallery = document.getElementById('project-gallery');
+  gallery.scrollBy({
+    left: -300,  // Défilement vers la gauche (ajustez la distance si nécessaire)
+    behavior: 'smooth'
+  });
+});
+
+document.querySelector('.scroll-btn.right').addEventListener('click', function() {
+  const gallery = document.getElementById('project-gallery');
+  gallery.scrollBy({
+    left: 300,  // Défilement vers la droite (ajustez la distance si nécessaire)
+    behavior: 'smooth'
+  });
+});
+
 
 
 

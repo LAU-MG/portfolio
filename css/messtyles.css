@@ -211,71 +211,119 @@ body {
   z-index: -1;
   opacity: 0.5; 
 }
-
-.history-tl-container {
-  width: 100%;
-  margin: auto;
-  position: relative;
-  display: block;
-  margin-left: 150px;
+/*PARCOURS*/
+/* Timeline container */
+/* Timeline bar */
+.timeline-bar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ccc;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
-ul.tl {
-  padding: 0;
-  margin: 0; /* Remove margin to better center the content */
-}
-
-ul.tl li {
+/* Timeline structure */
+.timeline {
   list-style: none;
-  margin: 20px auto; /* Center each timeline item and add vertical spacing */
-  min-height: 50px;
-  border-left: 1px dashed var(--timeline-border);
-  padding: 0 0 50px 30px;
+  padding: 0;
+  margin: 0;
   position: relative;
-  max-width: 500px; /* Optional: limit the width of the timeline items */
 }
 
-ul.tl li:last-child {
-  border-left: 0;
+.timeline-item {
+  position: relative;
+  margin: 40px 0; /* Espacement vertical */
+  clear: both;
 }
 
-ul.tl li::before {
-  content: " ";
+.timeline-item::before {
+  content: "";
   position: absolute;
-  left: -14px; /* Adjust circle position */
-  top: -5px;
-  border: 8px solid rgba(255, 255, 255, 0.74);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 3px solid #ccc;
   border-radius: 50%;
-  background: var(--timeline-bg);
-  height: 20px;
-  width: 20px;
-  transition: all 500ms ease-in-out;
+  z-index: 1;
 }
 
-ul.tl li:hover::before {
-  border-color: var(--timeline-bg);
-  transition: all 1000ms ease-in-out;
-}
-
-ul.tl li .item-title {
-   font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-ul.tl li .item-detail {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-}
-
-ul.tl li .timestamp {
-  color: #8D8D8D;
+.timestamp {
   position: absolute;
-  width: 100px;
-  left: -150px;
-  text-align: right;
+  top: 15px;  /* Augmenter cette valeur pour éloigner la date de la carte */
   font-size: 14px;
+  color: #888;
+  z-index: 1;
+  width:200px;
+  font-weight: bold;
 }
+
+.timeline-item:nth-child(odd) .timestamp {
+  left: calc(50% - 220px); /* Ajustement gauche */
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timestamp {
+  right: calc(50% - 220px); /* Ajustement droite */
+  text-align: left;
+}
+
+.item-content {
+  position: relative;
+  width: 40%;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .item-content {
+  float: left;
+  margin-left: calc(50% + 20px); /* Éloignement à gauche */
+}
+
+.timeline-item:nth-child(even) .item-content {
+  float: right;
+  margin-right: calc(50% + 20px); /* Éloignement à droite */
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.item-detail {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .timeline-bar {
+      display: none;
+  }
+  .timeline-item {
+      text-align: center;
+  }
+  .timestamp {
+      position: static;
+      display: block;
+      margin-bottom: 10px;
+  }
+  .item-content {
+      width: 90%;
+      margin: 0 auto;
+      float: none;
+  }
+}
+
 
 /*A PROPOS */
 .img-fluid {
@@ -311,36 +359,49 @@ h2.display-4 {
   font-weight: 300;
 }
 
-/* Style for button filters */
+/* Projets */
+/* Boutons de filtrage */
 .filter-btn {
   border: none;
-  background-color: #f8f9fa;
+  background-color: #ddd;
   color: #000;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .filter-btn.active {
-  background-color: var(--button-bg);
-  color: var(--nav-link-color);
+  background-color: #007bff;
+  color: #fff;
 }
 
-/* Style for galery */
+/* Conteneur de la galerie */
+.gallery-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/* Galerie avec défilement horizontal */
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
+  overflow-x: hidden; /* Masque la barre de défilement */
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  max-width: 100%;
 }
 
+/* Items de la galerie */
 .gallery-item {
-  position: relative;
-  width: calc(33.333% - 20px); /* 3 items per row with gap */
-  overflow: hidden;
+  flex: 0 0 calc(33.33% - 15px); /* Ajuste la largeur des éléments */
   border-radius: 5px;
-  display: none; /* Hide all items initially */
+  overflow: hidden;
+  position: relative;
 }
 
 .gallery-item img {
@@ -349,6 +410,7 @@ h2.display-4 {
   display: block;
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
   top: 0;
@@ -356,23 +418,54 @@ h2.display-4 {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  color: var(--nav-link-color);
-  opacity: 0;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease;
   text-align: center;
-  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover .overlay {
   opacity: 1;
 }
 
+/* Flèches de navigation placées à l'extérieur */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: -50px; /* Flèche gauche placée à l'extérieur */
+}
+
+.scroll-btn.right {
+  right: -50px; /* Flèche droite placée à l'extérieur */
+}
+
+.scroll-btn:hover {
+  background-color: #0056b3;
+}
+
+
 /* Style pour la section Compétences */
-/* Section générale */
+
 #competences {
   background-color: #f8f9fa;
 }
