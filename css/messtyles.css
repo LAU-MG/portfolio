@@ -131,7 +131,17 @@ body {
       transform: translateY(0);
   }
 }
+.bubble-item:hover {
+  background-color: #45a049;
+}
 
+.bubble-item i {
+  margin-right: 8px;
+}
+
+.bubble-item i.ri {
+  font-size: 20px;
+}
 
 /*HEADER */
 .header {
@@ -211,8 +221,8 @@ body {
   z-index: -1;
   opacity: 0.5; 
 }
+
 /*PARCOURS*/
-/* Timeline container */
 /* Timeline bar */
 .timeline-bar {
   position: absolute;
@@ -348,16 +358,12 @@ body {
   margin: auto;
   padding: 20px;
 }
-
-h2.display-4 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+h6 a {
+  color: white;
+  text-decoration: none; 
+  transition: color 0.3s ease; 
 }
 
-.display-4 {
-  font-size: 2.5rem;
-  font-weight: 300;
-}
 
 /* Projets */
 /* Boutons de filtrage */
@@ -464,7 +470,7 @@ h2.display-4 {
 }
 
 
-/* Style pour la section Compétences */
+/*COMPETENCES*/
 
 #competences {
   background-color: #f8f9fa;
