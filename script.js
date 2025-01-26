@@ -111,39 +111,7 @@ document.querySelectorAll('.category-title').forEach(title => {
       }
   });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
 
-  // Vérifie le thème actuel
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'dark') {
-      document.body.setAttribute('data-theme', 'dark');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-  } else {
-      document.body.setAttribute('data-theme', 'light');
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
-  }
-
-  themeToggle.addEventListener('click', () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-          // Passer en thème clair
-          document.body.setAttribute('data-theme', 'light');
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
-          localStorage.setItem('theme', 'light');
-      } else {
-          // Passer en thème sombre
-          document.body.setAttribute('data-theme', 'dark');
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
-          localStorage.setItem('theme', 'dark');
-      }
-  });
-});
 
 // Fonction pour taper le texte lettre par lettre
 document.addEventListener("DOMContentLoaded", () => {
@@ -166,62 +134,6 @@ function typeText(elementId, text, speed) {
   }
   typeWriter();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("navbar");
-  const menuBubbleContainer = document.getElementById("menu-bubble-container");
-  const mainBubble = document.getElementById("menu-toggle");
-  const bubbleItems = document.getElementById("bubble-items");
-
-  // Gestion du scroll
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      navbar.style.display = "none"; // Cacher la navbar normale
-      menuBubbleContainer.style.display = "flex"; // Afficher le menu rétréci
-    } else {
-      navbar.style.display = "flex"; // Réafficher la navbar normale
-      menuBubbleContainer.style.display = "none"; // Cacher le menu rétréci
-      bubbleItems.style.display = "none"; // Assurez-vous que les bulles sont cachées si le menu rétréci disparaît
-    }
-  };
-
-  // Gestion du clic sur la bulle principale
-  mainBubble.addEventListener("click", () => {
-    // Basculer l'affichage des bulles secondaires
-    if (bubbleItems.style.display === "flex") {
-      bubbleItems.style.display = "none"; // Masquer les bulles secondaires
-    } else {
-      bubbleItems.style.display = "flex"; // Afficher les bulles secondaires
-    }
-  });
-
-  // Masquer les bulles secondaires lors d'un clic extérieur
-  document.addEventListener("click", (event) => {
-    if (!menuBubbleContainer.contains(event.target) && bubbleItems.style.display === "flex") {
-      bubbleItems.style.display = "none"; // Masquer les bulles secondaires
-    }
-  });
-
-  // Écouter l'événement de défilement
-  window.addEventListener("scroll", handleScroll);
-});
-
-document.querySelector('.scroll-btn.left').addEventListener('click', function() {
-  const gallery = document.getElementById('project-gallery');
-  gallery.scrollBy({
-    left: -300,  // Défilement vers la gauche (ajustez la distance si nécessaire)
-    behavior: 'smooth'
-  });
-});
-
-document.querySelector('.scroll-btn.right').addEventListener('click', function() {
-  const gallery = document.getElementById('project-gallery');
-  gallery.scrollBy({
-    left: 300,  // Défilement vers la droite (ajustez la distance si nécessaire)
-    behavior: 'smooth'
-  });
-});
-
 
 
 

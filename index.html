@@ -2,327 +2,318 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Laura MIGUEL</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="css/messtyles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <script charset="utf-8" type="text/javascript" src="v2.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Laura MIGUEL</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/messtyles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script charset="utf-8" type="text/javascript" src="v2.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top island-navbar" id="navbar">
-        <div class="container island-container">
-            <a class="navbar-brand" href="#">Laura MIGUEL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto" id="menu-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#accueil">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#propos">À Propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#parcours">Parcours</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#competences">Compétences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projets">Projets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="#">LM</a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#accueil" class="navbar-link">Accueil</a></li>
+      <li><a href="#propos" class="navbar-link">À Propos</a></li>
+      <li><a href="#parcours" class="navbar-link">Parcours</a></li>
+      <li><a href="#competences" class="navbar-link">Compétences</a></li>
+      <li><a href="#projets" class="navbar-link">Projets</a></li>
+      <li><a href="#contact" class="navbar-link">Contact</a></li>
+    </ul>
+  </nav>  
+  <!-- Accueil -->
+  <header id="accueil" class="header">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <!-- Titre principal -->
+      <h1 class="display-4 fw-bold text-white">
+        Bonjour, je suis <span id="typed-name" class="highlighted-text text-accent"></span>
+      </h1>
+      <!-- Sous-titre -->
+      <p class="lead mb-4 text-light">
+        Développeuse Full-Stack | Passionnée par la technologie et l'innovation
+      </p>
+      <!-- Bouton contact -->
+      <a href="#contact" class="btn btn-outline-primary btn-lg">
+        Contactez-moi
+      </a>
+    </div>
+  </header>
+  <!-- À Propos -->
+  <section id="propos">
+    <div class="container">
+      <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+        <!-- Image -->
+        <div class="col-md-6" style="flex: 1; padding: 15px; text-align: center;">
+          <div class="image-wrapper">
+            <img src="images/photoHome.JPG" alt="Laura MIGUEL">
+          </div>
+        </div>
+        <!-- Texte -->
+        <div class="col-md-6" style="flex: 1; padding: 15px; text-align: center; text-align: start;">
+          <h2 class="section-title">À Propos</h2>
+          <p>
+            Passionnée par le développement web, j'ai acquis des compétences solides en tant que développeuse
+            full-stack.
+            Mon objectif est de créer des applications innovantes et fonctionnelles.
+          </p>
+          <a href="docs/MIGUEL_Laura_CV.pdf" class="btn-gradient" target="_blank">
+            <i class="ri-file-download-line"></i> Voir mon CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Parcours -->
+  <section id="parcours">
+    <h2>Mon Parcours</h2>
+    <div class="timeline-container">
+      <div class="timeline-row left">
+        <div class="timeline-point school"><i class="fas fa-laptop-code"></i></div>
+        <div class="timeline-card">
+          <h3>Développeuse Fullstack (alternance)</h3>
+          <p class="date"> 11 Septembre 2023 - 10 Septembre 2024</p>
+          <p class="location">MARC GAVANIER SAS, LYON 69005</p>
+          <p class="description">Développement FullStack. Travail fait en TDD.</p>
+        </div>
+      </div>
+      <div class="timeline-row right">
+        <div class="timeline-point job"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-card">
+          <h3>Licence professionnelle MIAW </h3>
+          <p class="date">2023 - 2024</p>
+          <p class="location">IUT, Évry Val d’Essonne 91000</p>
+          <p class="description">Licence professionnelle MIAW (Métiers de l’Informatique: Applications Web) parcours DAWI (Développement avancé d’Applications Web Internet et Intranet).</p>
+        </div>
+      </div>
+      <div class="timeline-row left">
+        <div class="timeline-point school"><i class="fas fa-laptop-code"></i></div>
+        <div class="timeline-card">
+          <h3>Développeuse Front-end(Stage)</h3>
+          <p class="date">10 JANVIER - 18 FÉVRIER 2022</p>
+          <p class="location">DANEM PEOPLE, LYON 69003</p>
+          <p class="description">Développement Front-end et Low-code Création sous CMS Market Grabber (utilisation des langages HTML, CSS, JavaScript). Gestion DNS/Serveur FTP.</p>
+        </div>
+      </div>
+      <div class="timeline-row right">
+        <div class="timeline-point job"><i class="fas fa-laptop-code"></i></div>
+        <div class="timeline-card">
+          <h3>Développeuse Front-end(Stage)</h3>
+          <p class="date">17 MAI - 25 JUIN 2021</p>
+          <p class="location">KPOS BUSINESS, VILLEURBANNE 69100</p>
+          <p class="description">Développement Low-Code Création et modification graphique des sites sous CMS (WordPress), SEO et hébergement (OVH).</p>
+        </div>
+      </div>
+      <div class="timeline-row left">
+        <div class="timeline-point school"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-card">
+          <h3> BTS SIO</h3>
+          <p class="date">2020 - 2022</p>
+          <p class="location">Lycée La Martinière Duchère, LYON 69009</p>
+          <p class="description">BTS SIO (Services informatique aux Organisations), option SLAM( Solutions Logicielles et Applications Métiers).</p>
+        </div>
+      </div>
+      <div class="timeline-row right">
+        <div class="timeline-point school"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-card">
+          <h3>LICENCE LEA</h3>
+          <p class="date">2019 - 2020</p>
+          <p class="location">Université JEAN MOULIN LYON 69003</p>
+          <p class="description">L1 Licence LEA(Langues Étrangères Appliquées), Anglais-Portugais</p>
+        </div>
+      </div>
+      <div class="timeline-row left">
+        <div class="timeline-point school"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-card">
+          <h3> BAC STMG</h3>
+          <p class="date">2019</p>
+          <p class="location">Lycée Édouard Hérriot, LYON 69006</p>
+          <p class="description">Bac STMG (Sciences et Technologies du Management, et de la Gestion),option Mercatique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Compétences -->
+  <section id="competences" class="competences-section">
+    <div class="container">
+      <h2 class="section-title">Mes Compétences</h2>
+      <div class="competences-content">
+        <!-- Langages -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-code"></i> Langages</h3>
+          <div class="competence-list">
+            <span class="competence-bubble">HTML</span>
+            <span class="competence-bubble">CSS</span>
+            <span class="competence-bubble">JavaScript</span>
+            <span class="competence-bubble">TypeScript</span>
+            <span class="competence-bubble">Python</span>
+            <span class="competence-bubble">Java</span>
+            <span class="competence-bubble">C#</span>
+            <span class="competence-bubble">PHP</span>
+            <span class="competence-bubble">SQL</span>
+          </div>
+        </div>
+        <!-- Frameworks -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-cogs"></i> Frameworks</h3>
+          <div class="competence-list">
+            <span class="competence-bubble">React</span>
+            <span class="competence-bubble">Laravel</span>
+            <span class="competence-bubble">Node.js</span>
+          </div>
+        </div>
+        <!-- Bases de données -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-database"></i> Bases de données</h3>
+          <div class="competence-list">
+            <span class="competence-bubble">MySQL</span>
+            <span class="competence-bubble">MongoDB</span>
+          </div>
+        </div>
+        <!-- CMS -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-cogs"></i> CMS</h3>
+          <div class="competence-list">
+            <span class="competence-bubble">WordPress</span>
+            <span class="competence-bubble">Joomla</span>
+            <span class="competence-bubble">Strapi</span>
+          </div>
+        </div>
+        <!-- Outils -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-tools"></i> Outils</h3>
+          <div class="competence-list">
+            <!-- Outils Développement -->
+            <div class="competence-subcategory">
+              <h4>Outils Développement</h4>
+              <span class="competence-bubble">Git</span>
+              <span class="competence-bubble">Docker</span>
+              <span class="competence-bubble">Figma</span>
             </div>
+            <!-- Outils Réseaux et Systèmes -->
+            <div class="competence-subcategory">
+              <h4>Outils Réseaux et Systèmes</h4>
+              <span class="competence-bubble">VMware</span>
+              <span class="competence-bubble">VirtualBox</span>
+              <span class="competence-bubble">Cisco</span>
+              <span class="competence-bubble">Active Directory</span>
+              <span class="competence-bubble">Wireshark</span>
+            </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Menu rétréci -->
-    <div id="menu-bubble-container" class="menu-bubble-container">
-        <div class="main-bubble" id="menu-toggle">
-            <i class="fas fa-bars"></i>
+        <!-- Réseau et Systèmes -->
+        <div class="competence-category">
+          <h3 class="category-title"><i class="fas fa-network-wired"></i> Réseau et Systèmes</h3>
+          <div class="competence-list">
+            <span class="competence-bubble">Virtualisation</span>
+            <span class="competence-bubble">Administration basique d'un réseau</span>
+            <span class="competence-bubble">Routage Basique</span>
+            <span class="competence-bubble">Gestion des Utilisateurs</span>
+          </div>
         </div>
-        <div class="bubble-items" id="bubble-items">
-            <a href="#accueil" class="bubble-item">
-                <i class="ri-home-line"></i> 
-              </a> 
-            <a href="#propos" class="bubble-item"><i class="ri-home-line"></i></a>
-            <a href="#parcours" class="bubble-item"><i class="ri-home-line"></i></a>
-            <a href="#competences" class="bubble-item"><i class="ri-home-line"></i></a>
-            <a href="#projets" class="bubble-item"><i class="ri-home-line"></i></a>
-            <a href="#contact" class="bubble-item"><i class="ri-home-line"></i></a>
+      </div>
+    </div>
+  </section>  
+  <!-- Projets -->
+  <section id="projets">
+    <div class="container">
+      <h1 class="section-title">Mes Projets</h1>
+      <div class="projects-gallery">
+        <div class="project-item">
+          <img src="images/projet1.png" alt="Prosperous Vodka">
+          <div class="overlay">
+            <p class="title">Prosperous Vodka</p>
+            <p class="description">Un projet innovant de vodka premium.</p>
+            <div class="buttons">
+              <a href="#">Voir</a>
+              <a href="#">Détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/projet2.png" alt="KPOS BUSINESS">
+          <div class="overlay">
+            <p class="title">KPOS BUSINESS</p>
+            <p class="description">Site vitrine de l'entreprise.</p>
+            <div class="buttons">
+              <a href="#">Voir</a>
+              <a href="#">Détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/projet3.png" alt="Elec-Jobs">
+          <div class="overlay">
+            <p class="title">Elec-Jobs</p>
+            <p class="description">Plateforme pour trouver des emplois électriques.</p>
+            <div class="buttons">
+              <a href="#">Voir</a>
+              <a href="#">Détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/projet4.png" alt="Cartographie Nationale">
+          <div class="overlay">
+            <p class="title">Cartographie Nationale</p>
+            <p class="description">Carte interactive national pour l'aide et l"accessibilité numérique .</p>
+            <div class="buttons">
+              <a href="#">Voir</a>
+              <a href="#">Détails</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+<section id="contact" class="contact-section">
+    <div class="card-contact">
+        <h2 class="contact-title">Contactez-moi</h2>
+        <div class="form-container">
+            <script>
+                try {
+                    hbspt.forms.create({
+                        region: "eu1",
+                        portalId: "144087335",
+                        formId: "3f2a6ae9-86e4-4e80-810a-acf17faac425"
+                    });
+                } catch (error) {
+                    console.error("Erreur lors du chargement du formulaire HubSpot :", error);
+                }
+            </script>
         </div>
     </div>
-    <!-- Accueil -->
-    <header id="accueil" class="header d-flex align-items-center justify-content-center text-center text-light">
-        <!-- Video Background -->
-        <video autoplay loop muted playsinline class="video-background">
-            <source src="media/header.mp4" type="video/mp4">
-            <!--Vidéo de Gabriel Lima: https://www.pexels.com/fr-fr/video/lumieres-ordinateur-clavier-couleurs-8466352/-->
-        </video>
-        <div class="container" data-aos="fade-down">
-            <h1 id="dynamic-name" class="display-4 fw-bold">Bonjour, je suis <span id="typed-name"></span></h1>
-            <p class="lead mb-4">Développeuse Full-Stack </p>
-            <a href="#contact" class="btn btn-primary btn-lg">Contactez-moi</a>
-            <div class="scroll-arrow mt-4">
-                <a href="#propos" class="btn btn-light"><i class="ri-arrow-down-line"></i></a>
-            </div>
-        </div>
-    </header>
-    <!-- À Propos -->
-    <section id="propos" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <img src="images/photoHome.JPG" class="img-fluid rounded-circle mb-3" alt="Laura MIGUEL">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="display-4 mb-4">À Propos</h2>
-                    <p>Passionnée par le développement web, j'ai acquis des compétences solides en tant que développeuse
-                        full-stack. Mon objectif est de créer des applications innovantes et fonctionnelles.</p>
-                    <a href="docs/MIGUEL_Laura_CV.pdf" class="btn btn-outline-dark mt-3" target="_blank">
-                        <i class="ri-file-download-line"></i> Voir mon CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="parcours" class="py-5">
-        <div class="container">
-            <h2 class="display-4 mb-4 text-center">Parcours</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 position-relative">
-                    <div class="timeline-bar"></div>
-                    <ul class="timeline">
-                        <li class="timeline-item">
-                            <div class="timestamp">11 sept 2023 - 11 sept 2024</div>
-                            <div class="item-content">
-                                <h5 class="item-subtitle">IUT d’Évry Val d’Essonne, EVRY 91042</h5>
-                                <h5 class="item-title">Licence professionnelle Métiers de l’Informatique: Applications
-                                    Web</h5>
-                            </div>
-                        </li>
-                        <li class="timeline-item">
-                            <div class="timestamp">11 sept 2023 - 10 sept 2024</div>
-                            <div class="item-content">
-                                <h5 class="item-subtitle">MARC GAVANIER SAS, LYON 69005 </h5>
-                                <h5 class="item-title">Développeuse fullstack Angular,Typescript...(alternance)</h5>
-                            </div>
-                        </li>
-                        <li class="timeline-item">
-                            <div class="timestamp">10 janvier 2022 - 18 février 2022</div>
-                            <div class="item-content">
-                                <h5 class="item-subtitle">DANEM PEOPLE, LYON 69003</h5>
-                                <h5 class="item-title">Développeuse front-end HTML5,CSS3,MarketGrabber (CMS) (stage de
-                                    deuxième année de BTS SIO)</h5>
-                            </div>
-                        </li>
-                        <li class="timeline-item">
-                            <div class="timestamp">17 mai 2021 - 25 juin 2021</div>
-                            <div class="item-content">
-                                <h5 class="item-subtitle">KPOS BUSINESS VILLEURBANNE, 69100</h5>
-                                <h5 class="item-title">Développeuse front-end WordPress (stage de deuxième année de BTS
-                                    SIO)</h5>
-                            </div>
-                        </li>
-                        <li class="timeline-item">
-                            <div class="timestamp">2020 - 2022</div>
-                            <div class="item-content">
-                                <h5 class="item-subtitle">Lycée La Martinière duchère, LYON 69009</h5>
-                                <h5 class="item-title">BTS SIO ( Services informatique aux Organisations),
-                                    option SLAM( Solutions Logicielles et Applications
-                                    Métiers)</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Compétences -->
-    <section id="competences" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="display-4 mb-5 text-center">Mes Compétences</h2>
-            <div class="skills-masonry">
-                <!-- Langages -->
-                <div class="skill-card tall-card">
-                    <h3>Langages</h3>
-                    <ul class="skill-list">
-                        <li><i class="devicon-html5-plain"></i> HTML5</li>
-                        <li><i class="devicon-css3-plain"></i> CSS3</li>
-                        <li><i class="devicon-javascript-plain"></i> JavaScript</li>
-                        <li><i class="devicon-java-plain"></i> Java</li>
-                        <li><i class="devicon-mysql-plain"></i> SQL</li>
-                        <li><i class="devicon-php-plain"></i> PHP</li>
-                        <li><i class="devicon-csharp-plain"></i> C#</li>
-                        <li><i class="devicon-python-plain"></i> Python</li>
-                        <li><i class="devicon-typescript-plain"></i> TypeScript</li>
-                    </ul>
-                </div>
-                <!-- Frameworks -->
-                <div class="skill-card">
-                    <h3>Frameworks</h3>
-                    <ul class="skill-list">
-                        <li><i class="devicon-react-original"></i> React</li>
-                        <li><i class="devicon-laravel-plain"></i> Laravel</li>
-                    </ul>
-                </div>
-                <!-- Bases de Données -->
-                <div class="skill-card wide-card">
-                    <div class="skill-icon">
-                        <i class="ri-database-fill"></i>
-                    </div>
-                    <h3>Bases de Données</h3>
-                    <ul class="skill-list">
-                        <li><i class="devicon-mysql-plain"></i> MySQL</li>
-                        <li><i class="devicon-mongodb-plain"></i> MongoDB</li>
-                    </ul>
-                </div>
-                <!-- CMS -->
-                <div class="skill-card">
-                    <h3>CMS</h3>
-                    <ul class="skill-list">
-                        <li><i class="devicon-wordpress-plain"></i> WordPress</li>
-                        <li><img src="images/logo-joomla.png" alt=" Joomla" style="width: 24px; height: 24px;"> Joomla
-                        </li>
-                        <li><img src="images/Strapi_logo.png" alt=" Strapi" style="width: 24px; height: 24px;"> Strapi
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projets" class="py-5">
-        <div class="container">
-            <h2 class="display-4 mb-4 text-center">Mes Projets</h2>
-            <div class="text-center mb-4">
-                <button class="filter-btn active" data-category="all">Tous</button>
-                <button class="filter-btn" data-category="entreprise">Entreprise</button>
-                <button class="filter-btn" data-category="ecole">École</button>
-                <button class="filter-btn" data-category="personnel">Personnel</button>
-            </div>
-            <div class="gallery-container">
-                <!-- Flèche de navigation à gauche -->
-                <button class="scroll-btn left">&lt;</button>
-                
-                <!-- Galerie des projets -->
-                <div class="gallery" id="project-gallery">
-                    <div class="gallery-item" data-category="entreprise">
-                        <img src="images/projet1.png" alt="Projet 1">
-                        <div class="overlay">
-                            <h6>
-                                <a href="https://prosperousvodka.com" title="Visiter Prosperous Vodka">
-                                    Prosperous Vodka
-                                </a>
-                            </h6>
-                            <p>Entreprise KPOS BUSINESS</p>
-                            <p>Site web sous WordPress sur la promotion de vodka.</p>
-                           <!-- <a href="" class="link-pj" target="_blank"><i class="ri-link mr-2"></i> Détails</a>-->
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="entreprise">
-                        <img src="images/projet2.png" alt="Projet 1">
-                        <div class="overlay">
-                            <h6>
-                                <a href="https://kposbusiness.com" title="Visiter KPOS BUSINESS">
-                                    KPOS BUSINESS
-                                </a>
-                            </h6>
-                            <p>Entreprise KPOS BUSINESS</p>
-                            <p>Site vitre de l'entreprise sous WordPress.</p>
-                           <!-- <a href="" class="link-pj" target="_blank"><i class="ri-link mr-2"></i> Détails</a>-->
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="entreprise">
-                        <img src="images/projet3.png" alt="Projet 3">
-                        <div class="overlay">
-                            <h6>
-                                <a href="https://www.elec-jobs.fr" title="Visiter  Elec-Jobs">
-                                    Elec-Jobs
-                                </a>
-                            </h6>
-                            <p>Entreprise DANEM PEOPLE</p>
-                            <p>Site vitre de l'entreprise sous WordPress.</p>
-                           <!-- <a href="" class="link-pj" target="_blank"><i class="ri-link mr-2"></i> Détails</a>-->
-                    </div>
-                </div>
-                    <div class="gallery-item" data-category="entreprise">
-                        <img src="images/projet4.png" alt="Projet 3">
-                        <div class="overlay">
-                            <h6>
-                                <a href="https://cartographie.societenumerique.gouv.fr" title="Visiter Cartographie Nationale">
-                                    Cartographie Nationale 
-                                </a>
-                            </h6>
-                            <p>Entreprise GAVANIER INGENIERIE LOGICIELLE</p>
-                            <p>Site vitre de l'entreprise sous WordPress.</p>
-                           <!-- <a href="" class="link-pj" target="_blank"><i class="ri-link mr-2"></i> Détails</a>-->
-                    </div>
-                </div>                
-                <!-- Flèche de navigation à droite -->
-                <button class="scroll-btn right">&gt;</button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact -->
-    <section id="contact" class="p-5">
-        <div class="container-contact">
-            <h2 class="contact-title ">Contactez-moi</h2>
-            <div class="hubspot-form">
-                <script>
-                    try {
-                        hbspt.forms.create({
-                            region: "eu1",
-                            portalId: "144087335",
-                            formId: "3f2a6ae9-86e4-4e80-810a-acf17faac425"
-                        });
-                    } catch (error) {
-                        console.error("Erreur lors du chargement du formulaire HubSpot : ", error);
-                    }
-                </script>
-            </div>
-        </div>
-    </section>
+</section>
+  <!-- Footer -->
+  <footer class="py-4 text-light text-center">
+    <div class="container">
+      <p>&copy; 2024 Laura MIGUEL</p>
+      <div class="social-icons">
+        <!-- Remplacer par les liens réels -->
+        <a href="https://www.linkedin.com/in/laura-miguel-6443a5235/" target="_blank" aria-label="LinkedIn" class="linkedin-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/LAU-MG" target="_blank" aria-label="GitHub" class="social-link github-link">
+          <i class="fab fa-github"></i>
+        </a>
+              </div>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-dark text-light text-center">
-        <div class="container">
-            <p>&copy; 2024 Laura MIGUEL.</p>
-        </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-
-    // Validation du formulaire de contact
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Simulate sending form data
-        const formMessage = document.getElementById('form-message');
-        formMessage.innerHTML = '<div class="alert alert-success">Merci pour votre message. Je vous répondrai dès que possible.</div>';
-
-        // Reset form
-        this.reset();
-    });
-</script>
 </body>
 
 </html>
