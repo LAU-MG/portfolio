@@ -1037,4 +1037,130 @@ footer .social-icons a:hover {
     font-size: 1.3rem;
   }
 }
+ 
+/*Pages details*/
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
 
+.arrow {
+  font-size: 2rem; 
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #21759B; 
+}
+
+.header-detail {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #21759B, #648a9c);
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  position: relative; 
+}
+
+.header-container-detail h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-container-detail p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.wordpress-page-detail {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(120deg, #eef2f3, #8e9eab);
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-detail {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.navbar-container-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand-detail {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #21759B;
+  text-decoration: none;
+}
+
+.navbar-menu-detail {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-link-detail {
+  text-decoration: none;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.navbar-link-detail:hover {
+  color: #21759B;
+}
+
+/* Content */
+.content-detail {
+  padding: 50px 0;
+}
+
+.content-container-detail {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row-detail {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.col-detail {
+  flex: 1;
+  min-width: 300px;
+}
+
+.img-fluid-detail {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer-detail {
+  background: #343a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
