@@ -135,6 +135,13 @@ function typeText(elementId, text, speed) {
   typeWriter();
 }
 
+const toggle = document.getElementById("navbar-toggle");
+const menu = document.getElementById("navbar-menu");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  menu.classList.toggle("active");
+});
 
 
 
