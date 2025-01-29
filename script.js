@@ -111,41 +111,16 @@ document.querySelectorAll('.category-title').forEach(title => {
       }
   });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
 
-  // Vérifie le thème actuel
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'dark') {
-      document.body.setAttribute('data-theme', 'dark');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-  } else {
-      document.body.setAttribute('data-theme', 'light');
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
-  }
-
-  themeToggle.addEventListener('click', () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-          // Passer en thème clair
-          document.body.setAttribute('data-theme', 'light');
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
-          localStorage.setItem('theme', 'light');
-      } else {
-          // Passer en thème sombre
-          document.body.setAttribute('data-theme', 'dark');
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
-          localStorage.setItem('theme', 'dark');
-      }
-  });
-});
 
 // Fonction pour taper le texte lettre par lettre
+document.addEventListener("DOMContentLoaded", () => {
+  const firstName = "Laura Miguel"; 
+  const typingSpeed = 100; 
+
+  typeText("typed-name", firstName, typingSpeed);
+});
+
 function typeText(elementId, text, speed) {
   let i = 0;
   const element = document.getElementById(elementId);
@@ -160,32 +135,13 @@ function typeText(elementId, text, speed) {
   typeWriter();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.getElementById("navbar");
-  const bubblesMenu = document.getElementById("bubbles-menu");
+const toggle = document.getElementById("navbar-toggle");
+const menu = document.getElementById("navbar-menu");
 
-  // Fonction pour gérer la transition shrink et disparition de la navbar normale
-  const handleScroll = () => {
-      if (window.scrollY > 100) {
-          navbar.classList.add("shrink"); // Rétrécir la navbar
-          navbar.classList.add("fade-out"); // Faire disparaître la navbar
-          bubblesMenu.classList.add("show"); // Afficher le menu à bulles
-      } else {
-          navbar.classList.remove("shrink"); // Restaurer la navbar
-          navbar.classList.remove("fade-out"); // Annuler la disparition
-          bubblesMenu.classList.remove("show"); // Masquer le menu à bulles
-      }
-  };
-
-  // Écouter l'événement de défilement
-  window.addEventListener("scroll", handleScroll);
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  menu.classList.toggle("active");
 });
-
-
-
-
-
-
 
 
 
