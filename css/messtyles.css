@@ -384,7 +384,7 @@ h2 {
   transform: translateX(-50%);
 }
 
-/* Ligne de la timeline */
+/* Timeline Row */
 .timeline-row {
   position: relative;
   display: flex;
@@ -392,7 +392,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Positionnement des cartes gauche ou droite */
 .timeline-row.left .timeline-card {
   margin-right: 10px;
   margin-left: 20px;
@@ -455,7 +454,7 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 3;
-  border: 2px solid #6d7a8f; 
+  border: 2px solid #6d7a8f;
 }
 
 .timeline-card:hover {
@@ -488,8 +487,57 @@ h2 {
 .timeline-card .description {
   font-size: 0.85rem;
   color: #444;
-  font-size: medium;
 }
+
+/* smartphone*/
+@media (max-width: 768px) {
+  /* Timeline Container */
+  .timeline-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Ligne centrale de la timeline retirée */
+  .timeline-container::before {
+    display: none; 
+  }
+
+  /* Timeline Row */
+  .timeline-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .timeline-row.left .timeline-card,
+  .timeline-row.right .timeline-card {
+    width: 90%; 
+    margin: 0 0 20px 0;
+  }
+
+  .timeline-point {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .timeline-card h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-card .date,
+  .timeline-card .location,
+  .timeline-card .description {
+    font-size: 0.85rem;
+  }
+}
+
 
 /*Projets*/
 #projets {
