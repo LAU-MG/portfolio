@@ -537,16 +537,7 @@ h2 {
     font-size: 0.85rem;
   }
 }
-.certification-container {
-  display: flex; 
-  align-items: center;
-  gap: 10px;
-}
 
-.cert-logo {
-  width: 40px; 
-  height: auto;
-}
 
 /*Projets*/
 #projets {
